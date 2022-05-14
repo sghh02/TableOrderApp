@@ -1,0 +1,11 @@
+<resources>
+    // お客様来店画面
+    <string name="app_name">注文アプリ</string>
+    <string name="tx_welcome">いらっしゃいませ</string>
+    <string name="tx_Number_of_people">人数を設定してください。</string>
+    <string name="tx_people">名様</string>
+    <string name="bt_Proceed_to_order">注文へ進む</string>
+
+    // 注文画面
+
+</resources>
