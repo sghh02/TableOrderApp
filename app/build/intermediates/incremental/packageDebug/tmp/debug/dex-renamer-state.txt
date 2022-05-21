@@ -1,4 +1,4 @@
-#Sun May 15 21:34:44 JST 2022
+#Sun May 22 00:35:50 JST 2022
 base.2=/Users/owner/TableOrderApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
 path.2=4/classes.dex
 base.1=/Users/owner/TableOrderApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex

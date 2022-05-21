@@ -10,5 +10,10 @@
     <string name="bt_Proceed_to_order">注文へ進む</string>
 
     // 注文画面
+    <string name="tab1">おすすめ</string>
+    <string name="tab2">料理1</string>
+    <string name="tab3">料理2</string>
+    <string name="tab4">料理３</string>
+    <string name="tab5">ドリンク</string>
 
 </resources>

@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvVisitScreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvVisitScreen2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -29,10 +29,10 @@
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvVisitScreen" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvVisitScreen3"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -46,55 +46,55 @@
         app:autoSizeMaxTextSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvVisitScreen2" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btMinus"
         android:layout_width="48dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:backgroundTint="#DF8602"
+        android:backgroundTint="@color/orange"
         android:text="@string/bt_minus"
         android:textSize="24sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/textView3"
-        app:layout_constraintEnd_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toTopOf="@+id/textView3" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvVisitScreen3"
+        app:layout_constraintEnd_toStartOf="@+id/tvVisitScreen3"
+        app:layout_constraintTop_toTopOf="@+id/tvVisitScreen3" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btPlus"
         android:layout_width="48dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:backgroundTint="#DF8602"
+        android:backgroundTint="@color/orange"
         android:text="@string/bt_plus"
         android:textSize="24sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/textView3"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toTopOf="@+id/textView3" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvVisitScreen3"
+        app:layout_constraintStart_toEndOf="@+id/tvVisitScreen3"
+        app:layout_constraintTop_toTopOf="@+id/tvVisitScreen3" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tvVisitScreen4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="@string/tv_people"
         android:textColor="#000000"
         android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="@+id/button2"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
+        app:layout_constraintBottom_toBottomOf="@+id/btPlus"
+        app:layout_constraintStart_toEndOf="@+id/btPlus" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btProceedToOrder"
         android:layout_width="700dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#DF8602"
+        android:backgroundTint="@color/orange"
         android:text="@string/bt_Proceed_to_order"
         android:textSize="96sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/tvVisitScreen3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
