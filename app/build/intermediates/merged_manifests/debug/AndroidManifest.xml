@@ -20,7 +20,7 @@
         android:theme="@style/Theme.TableOrderApp" >
         <activity
             android:name="com.websarva.wings.android.tableorderapp.OrderActivity"
-            android:exported="false"
+            android:exported="true"
             android:screenOrientation="landscape" />
         <activity
             android:name="com.websarva.wings.android.tableorderapp.MainActivity"

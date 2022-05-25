@@ -29,11 +29,11 @@
 20        android:theme="@style/Theme.TableOrderApp" >
 20-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:11:9-51
 21        <activity
-21-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:12:9-15:53
+21-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:12:9-15:52
 22            android:name="com.websarva.wings.android.tableorderapp.OrderActivity"
 22-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:13:13-42
-23            android:exported="false"
-23-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:14:13-37
+23            android:exported="true"
+23-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:14:13-36
 24            android:screenOrientation="landscape" />
 24-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:15:13-50
 25        <activity

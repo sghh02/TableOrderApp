@@ -4,7 +4,7 @@
             "outputFile": "/Users/owner/TableOrderApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "/Users/owner/.gradle/caches/transforms-3/46711a511d3e1cd7acb3e23e0cab2c15/transformed/material-1.4.0/res/values-small-v4/values-small-v4.xml",
+                    "source": "/Users/owner/.gradle/caches/transforms-3/4a311e76b5fb64820bb08cd92dfe0c84/transformed/material-1.6.0/res/values-small-v4/values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

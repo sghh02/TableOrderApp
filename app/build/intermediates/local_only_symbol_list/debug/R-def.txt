@@ -1,12 +1,13 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color color_tab_background
+color color_tab_unselected
 color ic_launcher_background
 color orange
 color purple_200
 color purple_500
 color purple_700
-color state_selected_false
 color teal_200
 color teal_700
 color white
@@ -15,24 +16,26 @@ drawable tab_shape_rounded_corner
 id btMinus
 id btPlus
 id btProceedToOrder
-id tabs
+id pager2
+id tab_layout
 id tvVisitScreen
 id tvVisitScreen2
 id tvVisitScreen3
 id tvVisitScreen4
 layout activity_main
 layout activity_order
-layout tab1
-layout tab2
-layout tab3
-layout tab4
-layout tab5
+layout fragment_tab1
+layout fragment_tab2
+layout fragment_tab3
+layout fragment_tab4
+layout fragment_tab5
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
 string bt_Proceed_to_order
 string bt_minus
 string bt_plus
+string hello_blank_fragment
 string tab1
 string tab2
 string tab3

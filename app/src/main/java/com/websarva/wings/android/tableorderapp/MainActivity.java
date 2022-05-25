@@ -1,12 +1,11 @@
 package com.websarva.wings.android.tableorderapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,34 +26,25 @@ public class MainActivity extends AppCompatActivity {
         Button button_send = findViewById(R.id.btProceedToOrder);
 
         // プラスボタン押下時の処理
-        button_Plus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String countView = new String((count_view.getText()).toString());
-                int mCount = Integer.parseInt(countView);
-                mCount++;
-                count_view.setText(String.valueOf(mCount));
-            }
+        button_Plus.setOnClickListener(view -> {
+            String countView = (count_view.getText()).toString();
+            int mCount = Integer.parseInt(countView);
+            mCount++;
+            count_view.setText(String.valueOf(mCount));
         });
 
         // マイナスボタン押下時の処理
-        button_minus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String countView = new String((count_view.getText()).toString());
-                int mCount = Integer.parseInt(countView);
-                mCount--;
-                count_view.setText(String.valueOf(mCount));
-            }
+        button_minus.setOnClickListener(view -> {
+            String countView = (count_view.getText()).toString();
+            int mCount = Integer.parseInt(countView);
+            mCount--;
+            count_view.setText(String.valueOf(mCount));
         });
 
         // 注文へ進むボタン押下時の処理
-        button_send.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, OrderActivity.class);
-                startActivity(intent);
-            }
+        button_send.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+            startActivity(intent);
         });
     }
 }

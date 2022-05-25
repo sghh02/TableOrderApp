@@ -11,8 +11,8 @@
         android:theme="@style/Theme.TableOrderApp">
         <activity
             android:name=".OrderActivity"
-            android:exported="false"
-            android:screenOrientation="landscape" />
+            android:exported="true"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

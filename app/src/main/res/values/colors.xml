@@ -8,5 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#DF8602</color>
-    <color name="state_selected_false">#7E7E7E</color>
+    <color name="color_tab_background">#9F9F9F</color>
+    <color name="color_tab_unselected">#7E7E7E</color>
 </resources>
