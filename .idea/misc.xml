@@ -4,10 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.203" />
+        <entry key="app/src/main/res/drawable/tab_item_layerlist.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/tab_selector_text.xml" value="0.203" />
         <entry key="app/src/main/res/drawable/tab_shape_rounded_corner.xml" value="0.203" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_order.xml" value="0.10074615478515625" />
+        <entry key="app/src/main/res/layout/activity_order.xml" value="0.167633056640625" />
         <entry key="app/src/main/res/layout/fragment_f5ragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_fragment1.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_fragment2.xml" value="0.1" />

@@ -5,20 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/color_tab_background"
     tools:context=".OrderActivity">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="@color/color_tab_background" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/color_tab_background"
+        app:tabPaddingTop="13dp"
         app:tabBackground="@drawable/tab_shape_rounded_corner"
-        app:tabIndicatorColor="@color/white"
+        app:tabIndicator="@null"
         app:tabSelectedTextColor="@color/white"
         app:tabTextColor="@color/black"
         app:tabMaxWidth="0dp"

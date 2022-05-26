@@ -1,9 +1,9 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color color_pager_background
 color color_tab_background
 color color_tab_unselected
-color ic_launcher_background
 color orange
 color purple_200
 color purple_500
@@ -45,5 +45,4 @@ string tv_number_of_people
 string tv_people
 string tv_set_number_people
 string tv_welcome
-style Base.Widget.Design.TabLayout
 style Theme.TableOrderApp
