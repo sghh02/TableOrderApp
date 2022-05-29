@@ -8,7 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#DF8602</color>
+    <color name="yellow">#FAEA5C</color>
     <color name="color_tab_background">#575757</color>
     <color name="color_tab_unselected">#DAD9D9</color>
     <color name="color_pager_background">#C7C7C7</color>
+    <color name="color_order_listing_background">#DAD9D9</color>
+
 </resources>

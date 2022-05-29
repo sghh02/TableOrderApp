@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color color_order_listing_background
 color color_pager_background
 color color_tab_background
 color color_tab_unselected
@@ -11,11 +12,17 @@ color purple_700
 color teal_200
 color teal_700
 color white
+color yellow
 drawable ic_launcher_foreground
 drawable tab_shape_rounded_corner
 id btMinus
 id btPlus
 id btProceedToOrder
+id button
+id button2
+id button3
+id button4
+id order_listing
 id pager2
 id tab_layout
 id tvVisitScreen
@@ -24,6 +31,7 @@ id tvVisitScreen3
 id tvVisitScreen4
 layout activity_main
 layout activity_order
+layout fragment_order_listing
 layout fragment_tab1
 layout fragment_tab2
 layout fragment_tab3

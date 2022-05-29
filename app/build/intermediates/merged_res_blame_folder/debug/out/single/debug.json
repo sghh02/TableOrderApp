@@ -80,6 +80,10 @@
         "source": "/Users/owner/TableOrderApp/app/src/main/res/layout/fragment_tab1.xml"
     },
     {
+        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/layout_fragment_order_listing.xml.flat",
+        "source": "/Users/owner/TableOrderApp/app/src/main/res/layout/fragment_order_listing.xml"
+    },
+    {
         "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/layout_fragment_tab2.xml.flat",
         "source": "/Users/owner/TableOrderApp/app/src/main/res/layout/fragment_tab2.xml"
     }

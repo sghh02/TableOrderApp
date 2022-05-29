@@ -7,14 +7,15 @@
         <entry key="app/src/main/res/drawable/tab_item_layerlist.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/tab_selector_text.xml" value="0.203" />
         <entry key="app/src/main/res/drawable/tab_shape_rounded_corner.xml" value="0.203" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_order.xml" value="0.167633056640625" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.11893004115226337" />
+        <entry key="app/src/main/res/layout/activity_order.xml" value="0.125" />
         <entry key="app/src/main/res/layout/fragment_f5ragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_fragment1.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_fragment2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_fragment3.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_fragment4.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_fragment5.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_order_listing.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_tab1.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_tab2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_tab3.xml" value="0.1" />

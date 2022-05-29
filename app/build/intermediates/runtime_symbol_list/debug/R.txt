@@ -1125,6 +1125,7 @@ int color cardview_light_background 0x7f05002b
 int color cardview_shadow_end_color 0x7f05002c
 int color cardview_shadow_start_color 0x7f05002d
 int color checkbox_themeable_attribute_color 0x7f05002e
+int color color_order_listing_background 0x7f05025f
 int color color_pager_background 0x7f05002f
 int color color_tab_background 0x7f050030
 int color color_tab_unselected 0x7f050031
@@ -1685,6 +1686,7 @@ int color test_mtrl_calendar_day_selected 0x7f05025b
 int color tooltip_background_dark 0x7f05025c
 int color tooltip_background_light 0x7f05025d
 int color white 0x7f05025e
+int color yellow 0x7f050260
 int dimen abc_action_bar_content_inset_material 0x7f060000
 int dimen abc_action_bar_content_inset_with_nav 0x7f060001
 int dimen abc_action_bar_default_height_material 0x7f060002
@@ -2518,6 +2520,10 @@ int id bounce 0x7f080058
 int id btMinus 0x7f080059
 int id btPlus 0x7f08005a
 int id btProceedToOrder 0x7f08005b
+int id button 0x7f0801c6
+int id button2 0x7f0801c7
+int id button3 0x7f0801c8
+int id button4 0x7f0801c9
 int id buttonPanel 0x7f08005c
 int id cache_measures 0x7f08005d
 int id cancel_action 0x7f08005e
@@ -2722,6 +2728,7 @@ int id notification_main_column 0x7f080124
 int id notification_main_column_container 0x7f080125
 int id off 0x7f080126
 int id on 0x7f080127
+int id order_listing 0x7f0801c5
 int id outline 0x7f080128
 int id outward 0x7f080129
 int id packed 0x7f08012a
@@ -2988,6 +2995,7 @@ int layout design_navigation_menu 0x7f0b002a
 int layout design_navigation_menu_item 0x7f0b002b
 int layout design_text_input_end_icon 0x7f0b002c
 int layout design_text_input_start_icon 0x7f0b002d
+int layout fragment_order_listing 0x7f0b0086
 int layout fragment_tab1 0x7f0b002e
 int layout fragment_tab2 0x7f0b002f
 int layout fragment_tab3 0x7f0b0030

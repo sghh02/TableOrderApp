@@ -26,18 +26,17 @@ public class OrderActivity extends AppCompatActivity {
         FragmentManager fm = getSupportFragmentManager();
         pagerAdapter = new PagerAdapter(fm, getLifecycle());
         viewPager2.setAdapter(pagerAdapter);
-
+        
          tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+             // タグセレクト時、Positionを取得する
              @Override
              public void onTabSelected(TabLayout.Tab tab) {
                  viewPager2.setCurrentItem(tab.getPosition());
              }
-
              @Override
              public void onTabUnselected(TabLayout.Tab tab) {
 
              }
-
              @Override
              public void onTabReselected(TabLayout.Tab tab) {
 
