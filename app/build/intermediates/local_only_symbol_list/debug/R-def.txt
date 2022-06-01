@@ -1,6 +1,8 @@
 R_DEF: Internal format may change without notice
 local
+array list_view
 color black
+color color_menu_title
 color color_order_listing_background
 color color_pager_background
 color color_tab_background
@@ -14,14 +16,15 @@ color teal_700
 color white
 color yellow
 drawable ic_launcher_foreground
+drawable menu_title_rounded_corner
 drawable tab_shape_rounded_corner
 id btMinus
 id btPlus
 id btProceedToOrder
 id button
+id button1
 id button2
 id button3
-id button4
 id order_listing
 id pager2
 id tab_layout
@@ -43,7 +46,6 @@ string app_name
 string bt_Proceed_to_order
 string bt_minus
 string bt_plus
-string hello_blank_fragment
 string tab1
 string tab2
 string tab3

@@ -8,51 +8,52 @@
     tools:context=".OrderListingFragment">
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_weight="1"
         android:backgroundTint="@color/yellow"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:layout_marginTop="7dp"
         android:text="店員呼出し"
         android:textColor="@color/black"
-        android:textSize="8sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="@color/yellow"
-        android:text="注文履歴"
-        android:textSize="8sp"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintStart_toEndOf="@+id/button4"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
         android:backgroundTint="@color/yellow"
-        android:text="お会計"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:layout_marginTop="7dp"
+        android:text="注文履歴"
         android:textColor="@color/black"
-        android:textSize="8sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintStart_toEndOf="@+id/button1"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="593dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
-        tools:layout_editor_absoluteX="1dp" />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/yellow"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:layout_marginTop="7dp"
+        android:text="お会計"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"

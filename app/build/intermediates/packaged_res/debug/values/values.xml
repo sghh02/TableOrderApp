@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
+    <string-array name="list_view">
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+        <item/>
+    </string-array>
     <color name="black">#FF000000</color>
+    <color name="color_menu_title">#F3F3F3</color>
     <color name="color_order_listing_background">#DAD9D9</color>
     <color name="color_pager_background">#C7C7C7</color>
     <color name="color_tab_background">#575757</color>
@@ -17,7 +29,6 @@
     <string name="bt_Proceed_to_order">注文へ進む</string>
     <string name="bt_minus">-</string>
     <string name="bt_plus">+</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tab1">おすすめ</string>
     <string name="tab2">料理1</string>
     <string name="tab3">料理2</string>

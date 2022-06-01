@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.203" />
+        <entry key="app/src/main/res/drawable/menu_title_rounded_corner.xml" value="0.1315" />
         <entry key="app/src/main/res/drawable/tab_item_layerlist.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/tab_selector_text.xml" value="0.203" />
         <entry key="app/src/main/res/drawable/tab_shape_rounded_corner.xml" value="0.203" />
@@ -15,8 +16,8 @@
         <entry key="app/src/main/res/layout/fragment_fragment3.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_fragment4.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_fragment5.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_order_listing.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_tab1.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_order_listing.xml" value="0.21996879875195008" />
+        <entry key="app/src/main/res/layout/fragment_tab1.xml" value="0.15612382234185734" />
         <entry key="app/src/main/res/layout/fragment_tab2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_tab3.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_tab4.xml" value="0.1" />

@@ -13,5 +13,6 @@
     <color name="color_tab_unselected">#DAD9D9</color>
     <color name="color_pager_background">#C7C7C7</color>
     <color name="color_order_listing_background">#DAD9D9</color>
+    <color name="color_menu_title">#F3F3F3</color>
 
 </resources>

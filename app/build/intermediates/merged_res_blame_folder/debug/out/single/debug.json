@@ -86,5 +86,9 @@
     {
         "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/layout_fragment_tab2.xml.flat",
         "source": "/Users/owner/TableOrderApp/app/src/main/res/layout/fragment_tab2.xml"
+    },
+    {
+        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/drawable_menu_title_rounded_corner.xml.flat",
+        "source": "/Users/owner/TableOrderApp/app/src/main/res/drawable/menu_title_rounded_corner.xml"
     }
 ]
