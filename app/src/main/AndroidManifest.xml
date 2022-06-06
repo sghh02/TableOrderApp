@@ -10,11 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TableOrderApp">
         <activity
-            android:name=".OrderActivity"
-            android:exported="true"
-            android:screenOrientation="landscape"/>
+            android:name=".administrator.MenuEditActivity"
+            android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".customer.CustomerMenuActivity"
+            android:exported="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".customer.OrderActivity"
+            android:exported="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SelectionActivity"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>

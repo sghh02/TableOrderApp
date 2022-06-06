@@ -63,7 +63,6 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
-array list_view
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -2521,6 +2520,8 @@ id beginning
 id blocking
 id bottom
 id bounce
+id btAdministrator
+id btCustomer
 id btMinus
 id btPlus
 id btProceedToOrder
@@ -2982,7 +2983,9 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_menu_edit
 layout activity_order
+layout activity_selection
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3123,6 +3126,8 @@ string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
 string bt_Proceed_to_order
+string bt_administrator
+string bt_customer
 string bt_minus
 string bt_plus
 string character_counter_content_description

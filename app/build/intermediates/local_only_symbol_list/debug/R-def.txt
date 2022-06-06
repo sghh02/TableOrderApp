@@ -1,6 +1,5 @@
 R_DEF: Internal format may change without notice
 local
-array list_view
 color black
 color color_menu_title
 color color_order_listing_background
@@ -18,6 +17,8 @@ color yellow
 drawable ic_launcher_foreground
 drawable menu_title_rounded_corner
 drawable tab_shape_rounded_corner
+id btAdministrator
+id btCustomer
 id btMinus
 id btPlus
 id btProceedToOrder
@@ -33,7 +34,9 @@ id tvVisitScreen2
 id tvVisitScreen3
 id tvVisitScreen4
 layout activity_main
+layout activity_menu_edit
 layout activity_order
+layout activity_selection
 layout fragment_order_listing
 layout fragment_tab1
 layout fragment_tab2
@@ -44,6 +47,8 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
 string bt_Proceed_to_order
+string bt_administrator
+string bt_customer
 string bt_minus
 string bt_plus
 string tab1

@@ -9,7 +9,9 @@
         <entry key="app/src/main/res/drawable/tab_selector_text.xml" value="0.203" />
         <entry key="app/src/main/res/drawable/tab_shape_rounded_corner.xml" value="0.203" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.11893004115226337" />
+        <entry key="app/src/main/res/layout/activity_menu_edit.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_order.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/activity_selection.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_f5ragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_fragment1.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_fragment2.xml" value="0.1" />

@@ -11,7 +11,7 @@
 9-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml
 10
 11    <application
-11-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:5:5-26:19
+11-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:5:5-33:19
 12        android:allowBackup="true"
 12-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -29,32 +29,46 @@
 20        android:theme="@style/Theme.TableOrderApp" >
 20-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:11:9-51
 21        <activity
-21-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:12:9-15:52
-22            android:name="com.websarva.wings.android.tableorderapp.OrderActivity"
-22-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:13:13-42
-23            android:exported="true"
-23-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:14:13-36
-24            android:screenOrientation="landscape" />
-24-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:15:13-50
-25        <activity
-25-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:16:9-25:20
-26            android:name="com.websarva.wings.android.tableorderapp.MainActivity"
-26-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:17:13-41
-27            android:exported="true"
-27-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:18:13-36
-28            android:screenOrientation="landscape" >
-28-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:19:13-50
-29            <intent-filter>
-29-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:20:13-24:29
-30                <action android:name="android.intent.action.MAIN" />
-30-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:21:17-69
-30-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:21:25-66
-31
-32                <category android:name="android.intent.category.LAUNCHER" />
-32-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:23:17-77
-32-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:23:27-74
-33            </intent-filter>
-34        </activity>
-35    </application>
-36
-37</manifest>
+21-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:12:9-14:40
+22            android:name="com.websarva.wings.android.tableorderapp.administrator.MenuEditActivity"
+22-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:13:13-59
+23            android:exported="false" />
+23-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:14:13-37
+24        <activity
+24-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:15:9-18:53
+25            android:name="com.websarva.wings.android.tableorderapp.customer.CustomerMenuActivity"
+25-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:16:13-58
+26            android:exported="true"
+26-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:17:13-36
+27            android:screenOrientation="landscape" />
+27-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:18:13-50
+28        <activity
+28-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:19:9-22:53
+29            android:name="com.websarva.wings.android.tableorderapp.customer.OrderActivity"
+29-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:20:13-51
+30            android:exported="true"
+30-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:21:13-36
+31            android:screenOrientation="landscape" />
+31-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:22:13-50
+32        <activity
+32-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:23:9-32:20
+33            android:name="com.websarva.wings.android.tableorderapp.SelectionActivity"
+33-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:24:13-46
+34            android:exported="true"
+34-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:25:13-36
+35            android:screenOrientation="landscape" >
+35-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:26:13-50
+36            <intent-filter>
+36-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:27:13-31:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:28:17-69
+37-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:28:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:30:17-77
+39-->/Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:30:27-74
+40            </intent-filter>
+41        </activity>
+42    </application>
+43
+44</manifest>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_pager_background"
-    tools:context=".TabFragment5">
+    tools:context=".customer.TabFragment5">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="2dp"
                     android:paddingBottom="2dp"
-                    android:text="ビール"
+                    android:text="ビール＆ハイボール"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:gravity="center"
@@ -43,7 +43,6 @@
                 <ListView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:entries="@array/list_view"
                     android:background="@color/white"
                     android:cacheColorHint="@color/color_tab_unselected"
                     android:dividerHeight="1dp"
@@ -74,7 +73,6 @@
                 <ListView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:entries="@array/list_view"
                     android:background="@color/white"
                     android:dividerHeight="1dp"
                     android:footerDividersEnabled="true"
@@ -105,7 +103,7 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="2dp"
                     android:paddingBottom="2dp"
-                    android:text="ハイボール"
+                    android:text="日本酒"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:gravity="center"
@@ -114,7 +112,6 @@
                 <ListView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:entries="@array/list_view"
                     android:background="@color/white"
                     android:dividerHeight="1dp"
                     android:footerDividersEnabled="true"
@@ -144,7 +141,6 @@
                 <ListView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:entries="@array/list_view"
                     android:background="@color/white"
                     android:dividerHeight="1dp"
                     android:footerDividersEnabled="true"

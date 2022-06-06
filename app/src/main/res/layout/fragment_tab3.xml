@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_pager_background"
-    tools:context=".TabFragment3">
+    tools:context=".customer.TabFragment3">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,7 +43,6 @@
                 <ListView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:entries="@array/list_view"
                     android:background="@color/white"
                     android:dividerHeight="1dp"
                     android:footerDividersEnabled="true"
@@ -73,7 +72,6 @@
                 <ListView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:entries="@array/list_view"
                     android:background="@color/white"
                     android:dividerHeight="1dp"
                     android:footerDividersEnabled="true"
@@ -113,7 +111,6 @@
                 <ListView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:entries="@array/list_view"
                     android:background="@color/white"
                     android:dividerHeight="1dp"
                     android:footerDividersEnabled="true"
@@ -143,7 +140,6 @@
                 <ListView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:entries="@array/list_view"
                     android:background="@color/white"
                     android:dividerHeight="1dp"
                     android:footerDividersEnabled="true"

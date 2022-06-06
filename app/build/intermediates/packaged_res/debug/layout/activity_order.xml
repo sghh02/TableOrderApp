@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:baselineAligned="false"
-    tools:context=".OrderActivity">
+    tools:context=".customer.OrderActivity">
 
     <LinearLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -71,7 +71,7 @@
     </LinearLayout>
     <fragment
         android:id="@+id/order_listing"
-        android:name="com.websarva.wings.android.tableorderapp.OrderListingFragment"
+        android:name="com.websarva.wings.android.tableorderapp.customer.OrderListingFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.7" />

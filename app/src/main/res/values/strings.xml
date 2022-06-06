@@ -1,9 +1,13 @@
 <resources>
+    // 権限選択画面
+    <string name="bt_administrator">管理者画面</string>
+    <string name="bt_customer">お客様画面</string>
+
     // お客様来店画面
     <string name="app_name">注文アプリ</string>
     <string name="tv_welcome">いらっしゃいませ</string>
     <string name="tv_number_of_people">人数を設定してください。</string>
-    <string name="tv_set_number_people">00</string>
+    <string name="tv_set_number_people">1</string>
     <string name="tv_people">名様</string>
     <string name="bt_plus">+</string>
     <string name="bt_minus">-</string>
@@ -15,18 +19,5 @@
     <string name="tab3">料理2</string>
     <string name="tab4">料理３</string>
     <string name="tab5">ドリンク</string>
-
-    // fragment1
-    <string-array name="list_view">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-    </string-array>
 
 </resources>

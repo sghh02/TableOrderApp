@@ -1,17 +1,5 @@
 [
     {
-        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/owner/TableOrderApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
-    },
-    {
-        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "/Users/owner/TableOrderApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/Users/owner/TableOrderApp/app/src/main/res/mipmap-hdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/layout_fragment_tab3.xml.flat",
         "source": "/Users/owner/TableOrderApp/app/src/main/res/layout/fragment_tab3.xml"
     },
@@ -36,16 +24,56 @@
         "source": "/Users/owner/TableOrderApp/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
+        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/owner/TableOrderApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/owner/TableOrderApp/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/layout_activity_menu_edit.xml.flat",
+        "source": "/Users/owner/TableOrderApp/app/src/main/res/layout/activity_menu_edit.xml"
+    },
+    {
+        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/owner/TableOrderApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/layout_activity_selection.xml.flat",
+        "source": "/Users/owner/TableOrderApp/app/src/main/res/layout/activity_selection.xml"
+    },
+    {
+        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/Users/owner/TableOrderApp/app/src/main/res/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/layout_fragment_tab1.xml.flat",
+        "source": "/Users/owner/TableOrderApp/app/src/main/res/layout/fragment_tab1.xml"
+    },
+    {
+        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/drawable_menu_title_rounded_corner.xml.flat",
+        "source": "/Users/owner/TableOrderApp/app/src/main/res/drawable/menu_title_rounded_corner.xml"
+    },
+    {
+        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/owner/TableOrderApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/owner/TableOrderApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/owner/TableOrderApp/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
         "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "/Users/owner/TableOrderApp/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
         "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/layout_fragment_tab4.xml.flat",
         "source": "/Users/owner/TableOrderApp/app/src/main/res/layout/fragment_tab4.xml"
-    },
-    {
-        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "/Users/owner/TableOrderApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/drawable_tab_shape_rounded_corner.xml.flat",
@@ -60,24 +88,8 @@
         "source": "/Users/owner/TableOrderApp/app/src/main/res/layout/activity_order.xml"
     },
     {
-        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "/Users/owner/TableOrderApp/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "/Users/owner/TableOrderApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
-    },
-    {
-        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/Users/owner/TableOrderApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
-    },
-    {
-        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/drawable_ic_launcher_foreground.xml.flat",
-        "source": "/Users/owner/TableOrderApp/app/src/main/res/drawable/ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/layout_fragment_tab1.xml.flat",
-        "source": "/Users/owner/TableOrderApp/app/src/main/res/layout/fragment_tab1.xml"
     },
     {
         "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/layout_fragment_order_listing.xml.flat",
@@ -86,9 +98,5 @@
     {
         "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/layout_fragment_tab2.xml.flat",
         "source": "/Users/owner/TableOrderApp/app/src/main/res/layout/fragment_tab2.xml"
-    },
-    {
-        "merged": "/Users/owner/TableOrderApp/app/build/intermediates/merged_res/debug/drawable_menu_title_rounded_corner.xml.flat",
-        "source": "/Users/owner/TableOrderApp/app/src/main/res/drawable/menu_title_rounded_corner.xml"
     }
 ]

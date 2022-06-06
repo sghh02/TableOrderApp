@@ -62,7 +62,6 @@ int animator mtrl_fab_hide_motion_spec 0x7f02001c
 int animator mtrl_fab_show_motion_spec 0x7f02001d
 int animator mtrl_fab_transformation_sheet_collapse_spec 0x7f02001e
 int animator mtrl_fab_transformation_sheet_expand_spec 0x7f02001f
-int array list_view 0x7f120000
 int attr actionBarDivider 0x7f030000
 int attr actionBarItemBackground 0x7f030001
 int attr actionBarPopupTheme 0x7f030002
@@ -2520,6 +2519,8 @@ int id beginning 0x7f080055
 int id blocking 0x7f080056
 int id bottom 0x7f080057
 int id bounce 0x7f080058
+int id btAdministrator 0x7f0801ce
+int id btCustomer 0x7f0801cf
 int id btMinus 0x7f080059
 int id btPlus 0x7f08005a
 int id btProceedToOrder 0x7f08005b
@@ -2981,7 +2982,9 @@ int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
 int layout activity_main 0x7f0b001c
+int layout activity_menu_edit 0x7f0b0088
 int layout activity_order 0x7f0b001d
+int layout activity_selection 0x7f0b0087
 int layout custom_dialog 0x7f0b001e
 int layout design_bottom_navigation_item 0x7f0b001f
 int layout design_bottom_sheet_dialog 0x7f0b0020
@@ -3122,6 +3125,8 @@ int string appbar_scrolling_view_behavior 0x7f0e001c
 int string bottom_sheet_behavior 0x7f0e001d
 int string bottomsheet_action_expand_halfway 0x7f0e001e
 int string bt_Proceed_to_order 0x7f0e001f
+int string bt_administrator 0x7f0e0087
+int string bt_customer 0x7f0e0088
 int string bt_minus 0x7f0e0020
 int string bt_plus 0x7f0e0021
 int string character_counter_content_description 0x7f0e0022
