@@ -20,6 +20,9 @@
     <string name="bt_customer">お客様画面</string>
     <string name="bt_minus">-</string>
     <string name="bt_plus">+</string>
+    <string name="del">削除</string>
+    <string name="move">移動</string>
+    <string name="reg">登録</string>
     <string name="tab1">おすすめ</string>
     <string name="tab2">料理1</string>
     <string name="tab3">料理2</string>
@@ -30,22 +33,22 @@
     <string name="tv_set_number_people">1</string>
     <string name="tv_welcome">いらっしゃいませ</string>
     <style name="Theme.TableOrderApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        
+        <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorOnBackground">#ABACAB</item>
-        
+        <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
-        
+        <!-- Status bar color. -->
         <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorOnBackground</item>
-        
+        <!-- フルスクリーン用の設定 -->
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
-        
+        <!-- Customize your theme here. -->
     </style>
 </resources>

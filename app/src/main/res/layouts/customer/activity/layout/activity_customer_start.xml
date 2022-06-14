@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".customer.customerstart.CustomerStartActivity">
+
+    <TextView
+        android:id="@+id/tvVisitScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/tv_welcome"
+        android:textColor="#000000"
+        android:textSize="96sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvVisitScreen2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/tv_number_of_people"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVisitScreen" />
+
+    <TextView
+        android:id="@+id/tvVisitScreen3"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="#D6D4D4"
+        android:freezesText="false"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="@string/tv_set_number_people"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:autoSizeMaxTextSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVisitScreen2" />
+
+    <Button
+        android:id="@+id/btMinus"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/orange"
+        android:text="@string/bt_minus"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/tvVisitScreen3"
+        app:layout_constraintEnd_toStartOf="@+id/tvVisitScreen3"
+        app:layout_constraintTop_toTopOf="@+id/tvVisitScreen3" />
+
+    <Button
+        android:id="@+id/btPlus"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@color/orange"
+        android:text="@string/bt_plus"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/tvVisitScreen3"
+        app:layout_constraintStart_toEndOf="@+id/tvVisitScreen3"
+        app:layout_constraintTop_toTopOf="@+id/tvVisitScreen3" />
+
+    <TextView
+        android:id="@+id/tvVisitScreen4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/tv_people"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btPlus"
+        app:layout_constraintStart_toEndOf="@+id/btPlus" />
+
+    <Button
+        android:id="@+id/btProceedToOrder"
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/orange"
+        android:text="@string/bt_Proceed_to_order"
+        android:textSize="96sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVisitScreen3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

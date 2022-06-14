@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.websarva.wings.android.tableorderapp.administrator.MenuEditActivity;
-import com.websarva.wings.android.tableorderapp.customer.CustomerMenuActivity;
+import com.websarva.wings.android.tableorderapp.admin.editmenu.MenuEditActivity;
+import com.websarva.wings.android.tableorderapp.customer.customerstart.CustomerStartActivity;
 
 public class SelectionActivity extends AppCompatActivity {
 
@@ -28,7 +28,7 @@ public class SelectionActivity extends AppCompatActivity {
         });
 
         button_customer.setOnClickListener(view -> {
-            Intent intent = new Intent(SelectionActivity.this, CustomerMenuActivity.class);
+            Intent intent = new Intent(SelectionActivity.this, CustomerStartActivity.class);
             startActivity(intent);
         });
     }

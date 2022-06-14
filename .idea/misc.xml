@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_baseline_unfold_more_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.203" />
         <entry key="app/src/main/res/drawable/menu_title_rounded_corner.xml" value="0.1315" />
         <entry key="app/src/main/res/drawable/tab_item_layerlist.xml" value="0.1" />
@@ -12,6 +13,11 @@
         <entry key="app/src/main/res/layout/activity_menu_edit.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_order.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_selection.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_edit1.xml" value="0.320953369140625" />
+        <entry key="app/src/main/res/layout/fragment_edit2.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_edit3.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_edit4.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_edit5.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_f5ragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_fragment1.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_fragment2.xml" value="0.1" />
@@ -19,11 +25,12 @@
         <entry key="app/src/main/res/layout/fragment_fragment4.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_fragment5.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_order_listing.xml" value="0.21996879875195008" />
-        <entry key="app/src/main/res/layout/fragment_tab1.xml" value="0.15612382234185734" />
+        <entry key="app/src/main/res/layout/fragment_tab1.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_tab2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_tab3.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_tab4.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_tab5.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/row_menu.xml" value="0.1" />
         <entry key="app/src/main/res/layout/tab1.xml" value="0.14114583333333333" />
         <entry key="app/src/main/res/layout/tab2.xml" value="0.14114583333333333" />
         <entry key="app/src/main/res/layout/tab3.xml" value="0.14114583333333333" />

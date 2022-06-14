@@ -19,14 +19,15 @@
         android:testOnly="true"
         android:theme="@style/Theme.TableOrderApp" >
         <activity
-            android:name="com.websarva.wings.android.tableorderapp.administrator.MenuEditActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.websarva.wings.android.tableorderapp.customer.CustomerMenuActivity"
+            android:name="com.websarva.wings.android.tableorderapp.admin.editmenu.MenuEditActivity"
             android:exported="true"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.websarva.wings.android.tableorderapp.customer.OrderActivity"
+            android:name="com.websarva.wings.android.tableorderapp.customer.customerstart.CustomerStartActivity"
+            android:exported="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.websarva.wings.android.tableorderapp.customer.ordermenu.OrderActivity"
             android:exported="true"
             android:screenOrientation="landscape" />
         <activity

@@ -20,4 +20,8 @@
     <string name="tab4">料理３</string>
     <string name="tab5">ドリンク</string>
 
+    // メニュー
+    <string name="reg">登録</string>
+    <string name="del">削除</string>
+    <string name="move">移動</string>
 </resources>
