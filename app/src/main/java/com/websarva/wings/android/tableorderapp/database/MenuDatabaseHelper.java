@@ -1,9 +1,9 @@
-package com.websarva.wings.android.tableorderapp;
+package com.websarva.wings.android.tableorderapp.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import static com.websarva.wings.android.tableorderapp.DBContract.DBEntry;
+import static com.websarva.wings.android.tableorderapp.database.DBContract.DBEntry;
 
 // データベースをアプリから使用するために、SQLiteOpenHelperを継承する
 // SQLiteOpenHelperは、データベースやテーブルが存在する場合はそれを開き、存在したい場合は作成してくれる

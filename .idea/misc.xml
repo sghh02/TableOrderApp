@@ -36,6 +36,8 @@
         <entry key="app/src/main/res/layout/tab3.xml" value="0.14114583333333333" />
         <entry key="app/src/main/res/layout/tab4.xml" value="0.14114583333333333" />
         <entry key="app/src/main/res/layout/tab5.xml" value="0.25" />
+        <entry key="app/src/main/res/layouts/admin/activity/layout/row_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/layouts/admin/fragment/layout/fragment_edit1.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.296" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2075" />
       </map>

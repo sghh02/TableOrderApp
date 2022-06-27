@@ -1,15 +1,17 @@
 package com.websarva.wings.android.tableorderapp.admin.editmenu;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.os.Bundle;
-import android.view.View;
-
 import com.google.android.material.tabs.TabLayout;
 import com.websarva.wings.android.tableorderapp.R;
 
+/**
+ * 役割：Fragmentの入れ物
+ */
 public class MenuEditActivity extends AppCompatActivity {
 
     TabLayout tabLayout;
@@ -50,17 +52,5 @@ public class MenuEditActivity extends AppCompatActivity {
                 tabLayout.selectTab(tabLayout.getTabAt(position));
             }
         });
-
-        // Android端末のナビゲーションバーを非表示に設定
-        View decorView = getWindow().getDecorView();
-        // ナビゲーションバーとステータスバーの両方を非表示にします。
-        // SYSTEM_UI_FLAG_FULLSCREEN は Android 4.1 以降で利用可能です。
-        // 一般的なルールとして、ナビゲーションバーを隠すときは常にステータスバーを隠すようにアプリを設計する必要があります。
-        // ナビゲーションバーを非表示にする場合は、ステータスバーを非表示にするようにアプリを設計するのが一般的です。
-        decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // ナビゲーションバーを非表示にする
-                | View.SYSTEM_UI_FLAG_IMMERSIVE
-                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION // ナビゲーションバーが非表示である前提でレイアウトする」
-                | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-        );
     }
 }

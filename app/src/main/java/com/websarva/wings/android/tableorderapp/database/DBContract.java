@@ -1,4 +1,4 @@
-package com.websarva.wings.android.tableorderapp;
+package com.websarva.wings.android.tableorderapp.database;
 
 import android.provider.BaseColumns;
 
