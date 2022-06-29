@@ -4,7 +4,6 @@ ADDED from /Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:2:1-36:12
 INJECTED from /Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:2:1-36:12
 INJECTED from /Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:2:1-36:12
 INJECTED from /Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml:2:1-36:12
-MERGED from [androidx.recyclerview:recyclerview-selection:1.1.0] /Users/owner/.gradle/caches/transforms-3/8f0dbf085dc8aae8e4f441e949503063/transformed/recyclerview-selection-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.6.0] /Users/owner/.gradle/caches/transforms-3/4a311e76b5fb64820bb08cd92dfe0c84/transformed/material-1.6.0/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/owner/.gradle/caches/transforms-3/fa34d802f5734ed21e2fff1e25ee6f90/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.2.1] /Users/owner/.gradle/caches/transforms-3/23399826e28a9128948ec03d7772a256/transformed/recyclerview-1.2.1/AndroidManifest.xml:17:1-24:12
@@ -38,7 +37,6 @@ MERGED from [androidx.loader:loader:1.0.0] /Users/owner/.gradle/caches/transform
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/owner/.gradle/caches/transforms-3/cbded60deb9bdab86c8b4b61fe4b5086/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/owner/.gradle/caches/transforms-3/5b6592e71f4a3a4c12eb9f17f8802d4e/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.5.0] /Users/owner/.gradle/caches/transforms-3/b1fe9740f6c86f0b7649a763c3bf2b85/transformed/core-1.5.0/AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/owner/.gradle/caches/transforms-3/47b8f488b2ddbb3907578da1290c6f45/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/owner/.gradle/caches/transforms-3/631c254547bfc5df4d5287473bf942d8/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/owner/.gradle/caches/transforms-3/2e4822f9fc5814ff03c58080f4b69279/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/owner/.gradle/caches/transforms-3/bd4596c4e03a42881733f45db8a548c5/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -46,6 +44,7 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/own
 MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/owner/.gradle/caches/transforms-3/27d248d36b9ab8161f69fc8bdff7973b/transformed/savedstate-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/owner/.gradle/caches/transforms-3/65298f10ce20363a24acca32d217749f/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-components:17.0.0] /Users/owner/.gradle/caches/transforms-3/4222072c9a9c9ed2dcfe1d1ad19e6c83/transformed/firebase-components-17.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/owner/.gradle/caches/transforms-3/47b8f488b2ddbb3907578da1290c6f45/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/owner/.gradle/caches/transforms-3/4814206f9931bb2b51fe2820b122a3b6/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/owner/.gradle/caches/transforms-3/03d84f79ddc5d095549aff719b894525/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/owner/.gradle/caches/transforms-3/43849a663b47b5e3a36a05a548a0e4d6/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
@@ -156,8 +155,6 @@ uses-sdk
 INJECTED from /Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml
 INJECTED from /Users/owner/TableOrderApp/app/src/main/AndroidManifest.xml
-MERGED from [androidx.recyclerview:recyclerview-selection:1.1.0] /Users/owner/.gradle/caches/transforms-3/8f0dbf085dc8aae8e4f441e949503063/transformed/recyclerview-selection-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview-selection:1.1.0] /Users/owner/.gradle/caches/transforms-3/8f0dbf085dc8aae8e4f441e949503063/transformed/recyclerview-selection-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.6.0] /Users/owner/.gradle/caches/transforms-3/4a311e76b5fb64820bb08cd92dfe0c84/transformed/material-1.6.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.6.0] /Users/owner/.gradle/caches/transforms-3/4a311e76b5fb64820bb08cd92dfe0c84/transformed/material-1.6.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/owner/.gradle/caches/transforms-3/fa34d802f5734ed21e2fff1e25ee6f90/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
@@ -224,8 +221,6 @@ MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/owne
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/owner/.gradle/caches/transforms-3/5b6592e71f4a3a4c12eb9f17f8802d4e/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.5.0] /Users/owner/.gradle/caches/transforms-3/b1fe9740f6c86f0b7649a763c3bf2b85/transformed/core-1.5.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.5.0] /Users/owner/.gradle/caches/transforms-3/b1fe9740f6c86f0b7649a763c3bf2b85/transformed/core-1.5.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/owner/.gradle/caches/transforms-3/47b8f488b2ddbb3907578da1290c6f45/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/owner/.gradle/caches/transforms-3/47b8f488b2ddbb3907578da1290c6f45/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/owner/.gradle/caches/transforms-3/631c254547bfc5df4d5287473bf942d8/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/owner/.gradle/caches/transforms-3/631c254547bfc5df4d5287473bf942d8/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/owner/.gradle/caches/transforms-3/2e4822f9fc5814ff03c58080f4b69279/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:20:5-22:41
@@ -240,6 +235,8 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/owner/.gradle/
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/owner/.gradle/caches/transforms-3/65298f10ce20363a24acca32d217749f/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-components:17.0.0] /Users/owner/.gradle/caches/transforms-3/4222072c9a9c9ed2dcfe1d1ad19e6c83/transformed/firebase-components-17.0.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-components:17.0.0] /Users/owner/.gradle/caches/transforms-3/4222072c9a9c9ed2dcfe1d1ad19e6c83/transformed/firebase-components-17.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/owner/.gradle/caches/transforms-3/47b8f488b2ddbb3907578da1290c6f45/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/owner/.gradle/caches/transforms-3/47b8f488b2ddbb3907578da1290c6f45/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/owner/.gradle/caches/transforms-3/4814206f9931bb2b51fe2820b122a3b6/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/owner/.gradle/caches/transforms-3/4814206f9931bb2b51fe2820b122a3b6/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/owner/.gradle/caches/transforms-3/03d84f79ddc5d095549aff719b894525/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41

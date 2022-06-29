@@ -14,22 +14,22 @@
         android:inputType="textMultiLine"
         android:textSize="20sp" />
 
-<!--    <ImageButton-->
-<!--        android:id="@+id/btn_move"-->
-<!--        android:layout_width="40dp"-->
-<!--        android:layout_height="70dp"-->
-<!--        android:background="#00000000"-->
-<!--        android:contentDescription="@string/move"-->
-<!--        android:gravity="center_vertical"-->
-<!--        app:srcCompat="@drawable/ic_baseline_unfold_more_24" />-->
+    <ImageButton
+        android:id="@+id/btn_move"
+        android:layout_width="40dp"
+        android:layout_height="70dp"
+        android:background="#00000000"
+        android:contentDescription="@string/move"
+        android:gravity="center_vertical"
+        app:srcCompat="@drawable/ic_baseline_unfold_more_24" />
 
-<!--    <ImageButton-->
-<!--        android:id="@+id/btn_del"-->
-<!--        android:layout_width="40dp"-->
-<!--        android:layout_height="70dp"-->
-<!--        android:background="#00000000"-->
-<!--        android:contentDescription="@string/del"-->
-<!--        android:gravity="center_vertical"-->
-<!--        app:srcCompat="@drawable/ic_baseline_close_24" />-->
+    <ImageButton
+        android:id="@+id/btn_del"
+        android:layout_width="40dp"
+        android:layout_height="70dp"
+        android:background="#00000000"
+        android:contentDescription="@string/del"
+        android:gravity="center_vertical"
+        app:srcCompat="@drawable/ic_baseline_close_24" />
 
 </LinearLayout>

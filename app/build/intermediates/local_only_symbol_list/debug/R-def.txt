@@ -29,6 +29,8 @@ id btCustomer
 id btMinus
 id btPlus
 id btProceedToOrder
+id btn_del
+id btn_move
 id button
 id button1
 id button2

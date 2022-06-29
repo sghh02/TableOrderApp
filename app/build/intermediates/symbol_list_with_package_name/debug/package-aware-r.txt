@@ -2468,7 +2468,6 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
-drawable selection_band_overlay
 drawable tab_shape_rounded_corner
 drawable test_custom_background
 drawable tooltip_frame_dark
@@ -2573,6 +2572,8 @@ id btCustomer
 id btMinus
 id btPlus
 id btProceedToOrder
+id btn_del
+id btn_move
 id button
 id button1
 id button2
