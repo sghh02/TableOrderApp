@@ -2,7 +2,6 @@ package com.websarva.wings.android.tableorderapp.admin.editmenu;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -12,14 +11,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.websarva.wings.android.tableorderapp.R;
-import com.websarva.wings.android.tableorderapp.admin.editmenu.fragment.EditFragment1;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
-
     private final ArrayList<String> localDataSet;
-    private EditFragment1 editFragment1;
 
     /**
      * 使用しているビューの種類への参照を提供します。
@@ -72,26 +69,43 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
         return new ViewHolder(view);
     }
 
-    // 3.onBindViewHolder()を呼び出す。そのときに、２で作成したビューホルダーと表示される位置を受け取る。
+    // 3.onBindViewHolder()を呼び出nnす。そのときに、２で作成したビューホルダーと表示される位置を受け取る。
     @SuppressLint("ClickableViewAccessibility")
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         // 4.受け取ったビューホルダーに表示するデータを埋め込む
         viewHolder.getTextView().setText(localDataSet.get(position));
 
+
+
         // 上移動ボタンをクリック
+        viewHolder.mbtMoveUp.setOnClickListener(view -> {
+            // このViewHolderによって表されるアイテムの、それをバインドしたものに対するアダプターの位置を返します
+            int adapterPosition = viewHolder.getBindingAdapterPosition();
+            if (adapterPosition != 0) {
+                Collections.swap(localDataSet, adapterPosition, adapterPosition - 1);
+                notifyItemMoved(adapterPosition, adapterPosition - 1);
+            }
+
+        });
 
         // 下移動ボタンをクリック
+        viewHolder.mbtMoveDown.setOnClickListener(view -> {
+            // このViewHolderによって表されるアイテムの、それをバインドしたものに対するアダプターの位置を返します
+            int adapterPosition = viewHolder.getBindingAdapterPosition();
+            if (adapterPosition != localDataSet.size() - 1) {
+                Collections.swap(localDataSet, adapterPosition, adapterPosition + 1);
+                notifyItemMoved(adapterPosition, adapterPosition + 1);
+            }
+        });
 
         // 削除ボタンをクリック
-        viewHolder.mbtDel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int adapterPosition = viewHolder.getAdapterPosition();
-                if (adapterPosition != -1) {
-                    localDataSet.remove(adapterPosition);
-                    notifyItemRemoved(adapterPosition);
-                }
+        viewHolder.mbtDel.setOnClickListener(v -> {
+            // このViewHolderによって表されるアイテムの、それをバインドしたものに対するアダプターの位置を返します
+            int adapterPosition = viewHolder.getBindingAdapterPosition();
+            if (adapterPosition != -1) {
+                localDataSet.remove(adapterPosition);
+                notifyItemRemoved(adapterPosition);
             }
         });
     }
