@@ -23,8 +23,10 @@ import java.util.Collections;
 public class EditFragment1 extends Fragment {
 
     private static final String TAG = Object.class.getName();
+    // データ格納用のList
+    private final ArrayList<String> data = new ArrayList<>();
     public ItemTouchHelper itemTouchHelper;
-    private View mview;
+
 
     ImageButton add_menu_button1;
     ImageButton add_menu_button2;
@@ -45,7 +47,7 @@ public class EditFragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Log.d(TAG, "onCreateView: called");
-        mview = inflater.inflate(R.layout.fragment_edit1, container, false);
+        View mview = inflater.inflate(R.layout.fragment_edit1, container, false);
 
         // ---> RecyclerView_start
         // RecyclerViewの取得
@@ -55,11 +57,6 @@ public class EditFragment1 extends Fragment {
         recyclerView4 = mview.findViewById(R.id.edit_list4);
 
         //Adapterの設定
-        ArrayList<String> data = new ArrayList<>();
-        for (int i =1; i <= 20; i++) {
-            data.add("test" + i);
-        }
-
         MenuAdapter adapter = new MenuAdapter(data);
         recyclerView1.setAdapter(adapter);
 
@@ -68,7 +65,10 @@ public class EditFragment1 extends Fragment {
         recyclerView1.setLayoutManager(layoutManager);
         // ---> RecyclerView_end
 
-        // ドラッグアンドドロップで移動
+
+        /**
+         * ItemTouchHelperを使いListの長押し時移動、スワイプ時削除を実装
+         */
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(
                 new ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP | ItemTouchHelper.DOWN,
                         ItemTouchHelper.LEFT) {
@@ -98,6 +98,34 @@ public class EditFragment1 extends Fragment {
         // ItemTouchHelper を RecyclerView にアタッチ
         itemTouchHelper.attachToRecyclerView(recyclerView1);
 
+        /**
+         * RecyclerViewにListを追加する処理
+         */
+        add_menu_button1 = mview.findViewById(R.id.add_menu_button1);
+        add_menu_button2 = mview.findViewById(R.id.add_menu_button2);
+        add_menu_button3 = mview.findViewById(R.id.add_menu_button3);
+        add_menu_button4 = mview.findViewById(R.id.add_menu_button4);
+
+        // add_menu_button1を押下時の処理
+        add_menu_button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //　新規リストを追加
+                data.add("test" + (data.size() + 1));
+                // リストを追加したことを通知
+                adapter.notifyItemInserted(adapter.getItemCount() + 1);
+            }
+        });
+
+        add_menu_button2.setOnClickListener(v ->
+                Toast.makeText(getActivity(), "Button2を押した！", Toast.LENGTH_SHORT).show());
+
+        add_menu_button3.setOnClickListener(v ->
+                Toast.makeText(getActivity(), "Button3を押した", Toast.LENGTH_SHORT).show());
+
+        add_menu_button4.setOnClickListener(v ->
+                Toast.makeText(getActivity(), "Button4を押した！", Toast.LENGTH_SHORT).show());
+
         return mview;
     }
 
@@ -106,25 +134,6 @@ public class EditFragment1 extends Fragment {
         Log.d(TAG, "onStart: called");
         super.onStart();
 
-        // add_menu_button1を取得
-        add_menu_button1 = (ImageButton) getView().findViewById(R.id.add_menu_button1);
-        // add_menu_button1を押下時の処理
-        add_menu_button1.setOnClickListener(v ->
-                Toast.makeText(getActivity(), "Button1を押した！", Toast.LENGTH_SHORT).show());
 
-        // add_menu_button2を取得
-        add_menu_button2 = (ImageButton) getView().findViewById(R.id.add_menu_button2);
-        add_menu_button2.setOnClickListener(v ->
-                Toast.makeText(getActivity(), "Button2を押した！", Toast.LENGTH_SHORT).show());
-
-        // add_menu_button3を取得
-        add_menu_button3 = (ImageButton) getView().findViewById(R.id.add_menu_button3);
-        add_menu_button3.setOnClickListener(v ->
-                Toast.makeText(getActivity(), "Button3を押した", Toast.LENGTH_SHORT).show());
-
-        // add_menu_button4を取得
-        add_menu_button4 = (ImageButton) getView().findViewById(R.id.add_menu_button4);
-        add_menu_button4.setOnClickListener(v ->
-                Toast.makeText(getActivity(), "Button4を押した！", Toast.LENGTH_SHORT).show());
     }
 }

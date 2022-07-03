@@ -28,7 +28,8 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
     static class ViewHolder extends RecyclerView.ViewHolder {
         // ビューに配置されたウィジェットへの参照を保持しておくためのフィールド
         private final TextView textView; // リストの内容
-        public ImageButton mbtMove;      // 移動ボタン
+        public ImageButton mbtMoveUp;    // 上移動ボタン
+        public ImageButton mbtMoveDown;  // 下移動ボタン
         public ImageButton mbtDel;       // 削除ボタン
 
         public ViewHolder(View view) {
@@ -36,7 +37,8 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
 
             // 各項目の参照を取得
             textView = view.findViewById(R.id.edit_text_view);
-            mbtMove = view.findViewById(R.id.btn_move);
+            mbtMoveUp = view.findViewById(R.id.btn_move_up);
+            mbtMoveDown = view.findViewById(R.id.btn_move_down);
             mbtDel = view.findViewById(R.id.btn_del);
         }
 
@@ -77,18 +79,9 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
         // 4.受け取ったビューホルダーに表示するデータを埋め込む
         viewHolder.getTextView().setText(localDataSet.get(position));
 
-        // 移動ボタンをタッチ
-        viewHolder.mbtMove.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getActionMasked() == MotionEvent.ACTION_DOWN) {
-                    // 長押しでなく、タッチしてすぐにドラッグ状態にする。
-                    editFragment1.itemTouchHelper.startDrag(viewHolder);
-                    return true;
-                }
-                return v.onTouchEvent(event);
-            }
-        });
+        // 上移動ボタンをクリック
+
+        // 下移動ボタンをクリック
 
         // 削除ボタンをクリック
         viewHolder.mbtDel.setOnClickListener(new View.OnClickListener() {
