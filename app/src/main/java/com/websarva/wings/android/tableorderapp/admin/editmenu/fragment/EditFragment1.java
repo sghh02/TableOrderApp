@@ -23,10 +23,11 @@ import java.util.Collections;
 public class EditFragment1 extends Fragment {
 
     private static final String TAG = Object.class.getName();
+
     // データ格納用のList
     private final ArrayList<String> data = new ArrayList<>();
-    public ItemTouchHelper itemTouchHelper;
 
+    public ItemTouchHelper itemTouchHelper;
 
     ImageButton add_menu_button1;
     ImageButton add_menu_button2;
@@ -38,6 +39,7 @@ public class EditFragment1 extends Fragment {
     RecyclerView recyclerView3;
     RecyclerView recyclerView4;
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,14 +49,13 @@ public class EditFragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Log.d(TAG, "onCreateView: called");
-        View mview = inflater.inflate(R.layout.fragment_edit1, container, false);
+        View view = inflater.inflate(R.layout.fragment_edit1, container, false);
 
-        // ---> RecyclerView_start
         // RecyclerViewの取得
-        recyclerView1 = mview.findViewById(R.id.edit_list1);
-        recyclerView2 = mview.findViewById(R.id.edit_list2);
-        recyclerView3 = mview.findViewById(R.id.edit_list3);
-        recyclerView4 = mview.findViewById(R.id.edit_list4);
+        recyclerView1 = view.findViewById(R.id.edit_list1);
+        recyclerView2 = view.findViewById(R.id.edit_list2);
+        recyclerView3 = view.findViewById(R.id.edit_list3);
+        recyclerView4 = view.findViewById(R.id.edit_list4);
 
         //Adapterの設定
         MenuAdapter adapter = new MenuAdapter(data);
@@ -63,13 +64,11 @@ public class EditFragment1 extends Fragment {
         //LayoutManagerの設定
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView1.setLayoutManager(layoutManager);
-        // ---> RecyclerView_end
-
 
         /**
          * ItemTouchHelperを使いListの長押し時移動、スワイプ時削除を実装
          */
-        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(
+        itemTouchHelper = new ItemTouchHelper(
                 new ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP | ItemTouchHelper.DOWN,
                         ItemTouchHelper.LEFT) {
                     // 長押しで移動
@@ -77,8 +76,8 @@ public class EditFragment1 extends Fragment {
                     public boolean onMove(@NonNull RecyclerView recyclerView,
                                           @NonNull RecyclerView.ViewHolder viewHolder,
                                           @NonNull RecyclerView.ViewHolder target) {
-                        final int fromPos = viewHolder.getAdapterPosition();
-                        final int toPos = target.getAdapterPosition();
+                        final int fromPos = viewHolder.getBindingAdapterPosition();
+                        final int toPos = target.getBindingAdapterPosition();
                         // データを入れ替え
                         Collections.swap(data, fromPos, toPos);
                         // 移動したことを通知
@@ -90,9 +89,9 @@ public class EditFragment1 extends Fragment {
                     @Override
                     public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                         // アイテムを削除
-                        data.remove(viewHolder.getAdapterPosition());
+                        data.remove(viewHolder.getBindingAdapterPosition());
                         // 削除したことを通知
-                        adapter.notifyItemRemoved(viewHolder.getAdapterPosition());
+                        adapter.notifyItemRemoved(viewHolder.getBindingAdapterPosition());
                     }
                 });
         // ItemTouchHelper を RecyclerView にアタッチ
@@ -101,10 +100,10 @@ public class EditFragment1 extends Fragment {
         /**
          * RecyclerViewにListを追加する処理
          */
-        add_menu_button1 = mview.findViewById(R.id.add_menu_button1);
-        add_menu_button2 = mview.findViewById(R.id.add_menu_button2);
-        add_menu_button3 = mview.findViewById(R.id.add_menu_button3);
-        add_menu_button4 = mview.findViewById(R.id.add_menu_button4);
+        add_menu_button1 = view.findViewById(R.id.add_menu_button1);
+        add_menu_button2 = view.findViewById(R.id.add_menu_button2);
+        add_menu_button3 = view.findViewById(R.id.add_menu_button3);
+        add_menu_button4 = view.findViewById(R.id.add_menu_button4);
 
         // add_menu_button1を押下時の処理
         add_menu_button1.setOnClickListener(new View.OnClickListener() {
@@ -126,7 +125,7 @@ public class EditFragment1 extends Fragment {
         add_menu_button4.setOnClickListener(v ->
                 Toast.makeText(getActivity(), "Button4を押した！", Toast.LENGTH_SHORT).show());
 
-        return mview;
+        return view;
     }
 
     @Override

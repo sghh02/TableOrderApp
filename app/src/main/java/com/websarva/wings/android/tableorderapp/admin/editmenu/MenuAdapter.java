@@ -50,7 +50,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
     /**
      * RecyclerViewでデータが表示されるまでの流れ
      * 1.onCreateViewHolder()を呼び出す
-     * 2.onCreateViewHolder()で、アイテムのレイアウトXMLファイルをもとにビューホルダーを作成して返す。
+     * 2.onCreateViewHolder()で、リスト1行分のレイアウトXMLファイルをもとにビューホルダーを作成して返す。
      * 3.onBindViewHolder()を呼び出す。そのときに、２で作成したビューホルダーと表示される位置を受け取る。
      * 4.受け取ったビューホルダーに表示するデータを埋め込む
      */
@@ -59,24 +59,19 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // 2.onCreateViewHolder()で、アイテムのレイアウトXMLファイルをもとにビューホルダーを作成して返す。
+        // 2.onCreateViewHolder()で、リスト1行分のレイアウトXMLファイルをもとにビューホルダーを作成して返す。
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.row_menu, parent, false);
-
-        // EditFragment1を取得
-//        editFragment1.getParentFragmentManager();
 
         return new ViewHolder(view);
     }
 
-    // 3.onBindViewHolder()を呼び出nnす。そのときに、２で作成したビューホルダーと表示される位置を受け取る。
+    // 3.onBindViewHolder()を呼び出す。そのときに、２で作成したビューホルダーと表示される位置を受け取る。
     @SuppressLint("ClickableViewAccessibility")
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         // 4.受け取ったビューホルダーに表示するデータを埋め込む
         viewHolder.getTextView().setText(localDataSet.get(position));
-
-
 
         // 上移動ボタンをクリック
         viewHolder.mbtMoveUp.setOnClickListener(view -> {
