@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <provider
-            android:name="android.app.slice.SliceProvider"
+            android:name=".provider.ProductProvider"
             android:authorities=" com.websarva.wings.android.tableorderapp.provider"
             android:exported="false" />
     </application>

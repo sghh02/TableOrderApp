@@ -24,25 +24,31 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
         // ビューに配置されたウィジェットへの参照を保持しておくためのフィールド
-        private final TextView textView; // リストの内容
-        public ImageButton mbtMoveUp;    // 上移動ボタン
-        public ImageButton mbtMoveDown;  // 下移動ボタン
-        public ImageButton mbtDel;       // 削除ボタン
+        public TextView product_name;  // 商品名
+        public TextView product_price; // 商品価格
+        public ImageButton btMoveUp;   // 上移動ボタン
+        public ImageButton btMoveDown; // 下移動ボタン
+        public ImageButton btDel;      // 削除ボタン
 
         public ViewHolder(View view) {
             super(view);
 
             // 各項目の参照を取得
-            textView = view.findViewById(R.id.edit_text_view);
-            mbtMoveUp = view.findViewById(R.id.btn_move_up);
-            mbtMoveDown = view.findViewById(R.id.btn_move_down);
-            mbtDel = view.findViewById(R.id.btn_del);
+            product_name = view.findViewById(R.id.name_text);
+            product_price = view.findViewById(R.id.price_text);
+            btMoveUp = view.findViewById(R.id.btn_move_up);
+            btMoveDown = view.findViewById(R.id.btn_move_down);
+            btDel = view.findViewById(R.id.btn_del);
         }
 
         public TextView getTextView() {
-            return textView;
+            return product_name;
+        }
+        public TextView getTextPrice() {
+            return product_price;
         }
     }
+
     public MenuAdapter(ArrayList<String> dataset) {
         localDataSet = dataset;
     }
@@ -72,11 +78,14 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         // 4.受け取ったビューホルダーに表示するデータを埋め込む
         viewHolder.getTextView().setText(localDataSet.get(position));
+        viewHolder.getTextPrice().setText(localDataSet.get(position));
 
         // 上移動ボタンをクリック
-        viewHolder.mbtMoveUp.setOnClickListener(view -> {
+        viewHolder.btMoveUp.setOnClickListener(view -> {
             // このViewHolderによって表されるアイテムの、それをバインドしたものに対するアダプターの位置を返します
             int adapterPosition = viewHolder.getBindingAdapterPosition();
+
+            // Listの一番上の行でない場合実行可
             if (adapterPosition != 0) {
                 Collections.swap(localDataSet, adapterPosition, adapterPosition - 1);
                 notifyItemMoved(adapterPosition, adapterPosition - 1);
@@ -85,9 +94,11 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
         });
 
         // 下移動ボタンをクリック
-        viewHolder.mbtMoveDown.setOnClickListener(view -> {
+        viewHolder.btMoveDown.setOnClickListener(view -> {
             // このViewHolderによって表されるアイテムの、それをバインドしたものに対するアダプターの位置を返します
             int adapterPosition = viewHolder.getBindingAdapterPosition();
+
+            // Listの一番下の行でない場合実行可
             if (adapterPosition != localDataSet.size() - 1) {
                 Collections.swap(localDataSet, adapterPosition, adapterPosition + 1);
                 notifyItemMoved(adapterPosition, adapterPosition + 1);
@@ -95,9 +106,11 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
         });
 
         // 削除ボタンをクリック
-        viewHolder.mbtDel.setOnClickListener(v -> {
+        viewHolder.btDel.setOnClickListener(v -> {
             // このViewHolderによって表されるアイテムの、それをバインドしたものに対するアダプターの位置を返します
             int adapterPosition = viewHolder.getBindingAdapterPosition();
+
+            // 削除処理
             if (adapterPosition != -1) {
                 localDataSet.remove(adapterPosition);
                 notifyItemRemoved(adapterPosition);

@@ -11,7 +11,7 @@ public final class DBContract {
     // 誤ってインスタンス化しないようにコンストラクタをプライベート宣言
     private DBContract() {};
 
-    // テーブルの内容を定義
+    // 商品テーブルの内容を定義
     public static class ProductEntry implements BaseColumns {
 
         // URIパス

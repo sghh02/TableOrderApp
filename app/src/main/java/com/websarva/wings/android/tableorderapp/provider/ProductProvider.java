@@ -36,14 +36,14 @@ public class ProductProvider extends ContentProvider {
     // DBHelperのインスタンス
     private ProductOpenHelper mProductOpenHelper;
 
-    // コンテンツプロバイダの作成
+    /** コンテンツプロバイダの作成。プロバイダの初期化 */
     @Override
     public boolean onCreate() {
         mProductOpenHelper = new ProductOpenHelper(getContext());
         return true;
     }
 
-    // query実行
+    /** データを取得。戻り値はCursor */
     @Nullable
     @Override
     public Cursor query(@NonNull Uri uri, @Nullable String[] strings, @Nullable String s, @Nullable String[] strings1, @Nullable String s1) {
@@ -62,7 +62,7 @@ public class ProductProvider extends ContentProvider {
         return cursor;
     }
 
-    // insert実行
+    /** 行を追加。戻り値は新たに追加された行のURI */
     @Nullable
     @Override
     public Uri insert(@NonNull Uri uri, @Nullable ContentValues contentValues) {
@@ -88,7 +88,7 @@ public class ProductProvider extends ContentProvider {
         }
     }
 
-    // delete実行
+    /** 行を削除。戻り地は行の数 */
     @Override
     public int delete(@NonNull Uri uri, @Nullable String s, @Nullable String[] strings) {
         SQLiteDatabase db = mProductOpenHelper.getWritableDatabase();
@@ -105,7 +105,7 @@ public class ProductProvider extends ContentProvider {
         return count;
     }
 
-    // update実行
+    /** 各業を更新。戻り値は更新した行の数 */
     @Override
     public int update(@NonNull Uri uri, @Nullable ContentValues contentValues, @Nullable String s, @Nullable String[] strings) {
         SQLiteDatabase db = mProductOpenHelper.getWritableDatabase();
@@ -116,7 +116,7 @@ public class ProductProvider extends ContentProvider {
         return count;
     }
 
-    // コンテントタイプ取得
+    /** ContentURIに対応するMIMEタイプを返す */
     @Nullable
     @Override
     public String getType(@NonNull Uri uri) {

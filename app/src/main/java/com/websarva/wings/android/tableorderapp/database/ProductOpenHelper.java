@@ -41,7 +41,12 @@ public class ProductOpenHelper extends SQLiteOpenHelper {
                 SQL_CREATE_ENTRIES
         );
 
+        db.execSQL(
+                "insert into product values(1,'beer',550)"
+        );
+
         Log.d("debug", "onCreate(SQLiteDatabase db)");
+
     }
 
     @Override
