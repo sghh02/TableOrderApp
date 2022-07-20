@@ -1,6 +1,7 @@
 package com.websarva.wings.android.tableorderapp.admin.editmenu;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,10 +14,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.websarva.wings.android.tableorderapp.R;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
-    private final ArrayList<String> localDataSet;
+
+    Context context;
+    // 商品番号、商品名、商品価格のArrayList
+    ArrayList number, name, price;
+
+    // コンストラクタ
+    public MenuAdapter(Context context, ArrayList number, ArrayList name, ArrayList price) {
+        this.context = context;
+        this.number = number;
+        this.name = name;
+        this.price = price;
+    }
 
     /**
      * 使用しているビューの種類への参照を提供します。
@@ -41,17 +52,14 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
             btDel = view.findViewById(R.id.btn_del);
         }
 
-        public TextView getTextView() {
-            return product_name;
-        }
-        public TextView getTextPrice() {
-            return product_price;
-        }
+//        public TextView getTextView() {
+//            return product_name;
+//        }
+//        public TextView getTextPrice() {
+//            return product_price;
+//        }
     }
 
-    public MenuAdapter(ArrayList<String> dataset) {
-        localDataSet = dataset;
-    }
 
     /**
      * RecyclerViewでデータが表示されるまでの流れ
@@ -66,8 +74,8 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // 2.onCreateViewHolder()で、リスト1行分のレイアウトXMLファイルをもとにビューホルダーを作成して返す。
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.row_menu, parent, false);
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View view = inflater.inflate(R.layout.row_menu, parent, false);
 
         return new ViewHolder(view);
     }
@@ -77,8 +85,11 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         // 4.受け取ったビューホルダーに表示するデータを埋め込む
-        viewHolder.getTextView().setText(localDataSet.get(position));
-        viewHolder.getTextPrice().setText(localDataSet.get(position));
+//        viewHolder.getTextView().setText(localDataSet.get(position));
+//        viewHolder.getTextPrice().setText(localDataSet.get(position));
+
+        viewHolder.product_name.setText(String.valueOf(name.get(position)));
+        viewHolder.product_price.setText(String.valueOf(price.get(position)));
 
         // 上移動ボタンをクリック
         viewHolder.btMoveUp.setOnClickListener(view -> {
@@ -86,10 +97,10 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
             int adapterPosition = viewHolder.getBindingAdapterPosition();
 
             // Listの一番上の行でない場合実行可
-            if (adapterPosition != 0) {
-                Collections.swap(localDataSet, adapterPosition, adapterPosition - 1);
-                notifyItemMoved(adapterPosition, adapterPosition - 1);
-            }
+//            if (adapterPosition != 0) {
+//                Collections.swap(localDataSet, adapterPosition, adapterPosition - 1);
+//                notifyItemMoved(adapterPosition, adapterPosition - 1);
+//            }
 
         });
 
@@ -99,10 +110,10 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
             int adapterPosition = viewHolder.getBindingAdapterPosition();
 
             // Listの一番下の行でない場合実行可
-            if (adapterPosition != localDataSet.size() - 1) {
-                Collections.swap(localDataSet, adapterPosition, adapterPosition + 1);
-                notifyItemMoved(adapterPosition, adapterPosition + 1);
-            }
+//            if (adapterPosition != localDataSet.size() - 1) {
+//                Collections.swap(localDataSet, adapterPosition, adapterPosition + 1);
+//                notifyItemMoved(adapterPosition, adapterPosition + 1);
+//            }
         });
 
         // 削除ボタンをクリック
@@ -111,16 +122,16 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
             int adapterPosition = viewHolder.getBindingAdapterPosition();
 
             // 削除処理
-            if (adapterPosition != -1) {
-                localDataSet.remove(adapterPosition);
-                notifyItemRemoved(adapterPosition);
-            }
+//            if (adapterPosition != -1) {
+//                localDataSet.remove(adapterPosition);
+//                notifyItemRemoved(adapterPosition);
+//            }
         });
     }
 
     // アイテム数を取得
     @Override
     public int getItemCount() {
-        return localDataSet.size();
+        return name.size();
     }
 }

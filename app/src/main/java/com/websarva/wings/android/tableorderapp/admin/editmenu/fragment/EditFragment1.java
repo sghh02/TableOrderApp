@@ -1,6 +1,9 @@
 package com.websarva.wings.android.tableorderapp.admin.editmenu.fragment;
 
 import android.content.ContentValues;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Path;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.websarva.wings.android.tableorderapp.R;
 import com.websarva.wings.android.tableorderapp.admin.editmenu.MenuAdapter;
+import com.websarva.wings.android.tableorderapp.admin.editmenu.MenuAddActivity;
 import com.websarva.wings.android.tableorderapp.database.DBContract.ProductEntry;
 import com.websarva.wings.android.tableorderapp.database.ProductOpenHelper;
 
@@ -27,7 +31,7 @@ import java.util.Collections;
 
 public class EditFragment1 extends Fragment {
 
-    private static final String TAG = Object.class.getName();
+    private static final String TAG = "EditFragment1";
 
     // データ格納用のList
     private final ArrayList<String> data = new ArrayList<>();
@@ -48,8 +52,10 @@ public class EditFragment1 extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         ProductOpenHelper productOpenHelper = new ProductOpenHelper(getContext());
-        productOpenHelper.close();
+        SQLiteDatabase writableDatabase = productOpenHelper.getWritableDatabase();
+        writableDatabase.close();
         Log.d("producoOpenHelper", "onCreate");
     }
 
@@ -66,8 +72,8 @@ public class EditFragment1 extends Fragment {
         recyclerView4 = view.findViewById(R.id.edit_list4);
 
         // Adapterの設定
-        MenuAdapter adapter = new MenuAdapter(data);
-        recyclerView1.setAdapter(adapter);
+//        MenuAdapter adapter = new MenuAdapter(data);
+//        recyclerView1.setAdapter(adapter);
 
         // LayoutManagerの設定
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
@@ -76,34 +82,35 @@ public class EditFragment1 extends Fragment {
         /**
          * ItemTouchHelperを使いListの長押し時移動、スワイプ時削除を実装
          */
-        itemTouchHelper = new ItemTouchHelper(
-                new ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP | ItemTouchHelper.DOWN,
-                        ItemTouchHelper.LEFT) {
-                    // 長押しで移動
-                    @Override
-                    public boolean onMove(@NonNull RecyclerView recyclerView,
-                                          @NonNull RecyclerView.ViewHolder viewHolder,
-                                          @NonNull RecyclerView.ViewHolder target) {
-                        final int fromPos = viewHolder.getBindingAdapterPosition();
-                        final int toPos = target.getBindingAdapterPosition();
-                        // データを入れ替え
-                        Collections.swap(data, fromPos, toPos);
-                        // 移動したことを通知
-                        adapter.notifyItemMoved(fromPos, toPos);
-                        return true;
-                    }
+//        itemTouchHelper = new ItemTouchHelper(
+//                new ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP | ItemTouchHelper.DOWN,
+//                        ItemTouchHelper.LEFT) {
+//                    // 長押しで移動
+//                    @Override
+//                    public boolean onMove(@NonNull RecyclerView recyclerView,
+//                                          @NonNull RecyclerView.ViewHolder viewHolder,
+//                                          @NonNull RecyclerView.ViewHolder target) {
+//                        final int fromPos = viewHolder.getBindingAdapterPosition();
+//                        final int toPos = target.getBindingAdapterPosition();
+//                        // データを入れ替え
+//                        Collections.swap(data, fromPos, toPos);
+//                        // 移動したことを通知
+//                        adapter.notifyItemMoved(fromPos, toPos);
+//                        return true;
+//                    }
+//
+//                    // スワイプで削除
+//                    @Override
+//                    public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+//                        // アイテムを削除
+//                        data.remove(viewHolder.getBindingAdapterPosition());
+//                        // 削除したことを通知
+//                        adapter.notifyItemRemoved(viewHolder.getBindingAdapterPosition());
+//                    }
+//        });
 
-                    // スワイプで削除
-                    @Override
-                    public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-                        // アイテムを削除
-                        data.remove(viewHolder.getBindingAdapterPosition());
-                        // 削除したことを通知
-                        adapter.notifyItemRemoved(viewHolder.getBindingAdapterPosition());
-                    }
-                });
         // ItemTouchHelper を RecyclerView にアタッチ
-        itemTouchHelper.attachToRecyclerView(recyclerView1);
+//        itemTouchHelper.attachToRecyclerView(recyclerView1);
 
         /**
          * RecyclerViewにListを追加する処理
@@ -114,21 +121,9 @@ public class EditFragment1 extends Fragment {
         add_menu_button4 = view.findViewById(R.id.add_menu_button4);
 
         // add_menu_button1を押下時の処理
-        add_menu_button1.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.R)
-            @Override
-            public void onClick(View v) {
-                ContentValues values = new ContentValues();
-                    values.put(ProductEntry.COLUMN_NAME_NAME, "name");
-                    // values.put(ProductEntry.COLUMN_NAME_PRICE, "100円");
-                    getContext().getContentResolver().insert(ProductEntry.CONTENT_URI, null, null);
-
-                //　新規リストを追加
-                // data.add("test" + (data.size() + 1));
-                data.add(String.valueOf(values));
-                // リストを追加したことを通知
-                adapter.notifyItemInserted(adapter.getItemCount() + 1);
-            }
+        add_menu_button1.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), MenuAddActivity.class);
+            startActivity(intent);
         });
 
         add_menu_button2.setOnClickListener(v ->

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".admin.editmenu.MenuAddActivity">
+
+    <EditText
+        android:id="@+id/product_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="商品番号"
+        android:textSize="30sp"
+        android:inputType="number"
+        android:layout_margin="40dp" />
+
+
+    <EditText
+        android:id="@+id/product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="商品名"
+        android:textSize="30sp"
+        android:inputType="text"
+        android:layout_margin="40dp" />
+
+    <EditText
+        android:id="@+id/product_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="商品価格"
+        android:textSize="30sp"
+        android:layout_margin="40dp" />
+
+    <Button
+        android:id="@+id/add_menu_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="商品を追加"
+        android:textSize="30sp"
+        android:layout_margin="40dp" />
+</LinearLayout>
