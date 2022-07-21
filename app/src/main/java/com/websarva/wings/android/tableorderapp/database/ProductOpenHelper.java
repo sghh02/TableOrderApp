@@ -68,23 +68,21 @@ public class ProductOpenHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(ProductEntry.COLUMN_NAME_PRODUCT_ID, product_id);
-        cv.put(ProductEntry.PRODUCT_TABLE_NAME, name);
+        cv.put(ProductEntry.COLUMN_NAME_NAME, name);
         cv.put(ProductEntry.COLUMN_NAME_PRICE, price);
 
         long result = db.insert(ProductEntry.PRODUCT_TABLE_NAME, null, cv);
-        if(result == -1){
-            Toast.makeText(context,"Failed",Toast.LENGTH_SHORT).show();
-        }else{
-            Toast.makeText(context,"success",Toast.LENGTH_SHORT).show();
+        if (result == -1) {
+            Log.d("addData:", "failed");
+        } else {
+            Log.d("addData:", "success");
         }
-
-        Log.d("addData", "OK");
     }
 
     // Cursor作成のために必要
     // rawQueryの引数にはSQL文を渡す
     // MenuAdapterでCursorを作成する時に呼び出される
-    Cursor readData() {
+    public Cursor readData() {
         String query = "SELECT * FROM " + ProductEntry.PRODUCT_TABLE_NAME;
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -94,4 +92,7 @@ public class ProductOpenHelper extends SQLiteOpenHelper {
         }
         return cursor;
     }
+
+    // データ削除メソッド
+
 }

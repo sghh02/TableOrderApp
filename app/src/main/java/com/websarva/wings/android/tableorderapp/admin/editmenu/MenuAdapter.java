@@ -51,13 +51,6 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
             btMoveDown = view.findViewById(R.id.btn_move_down);
             btDel = view.findViewById(R.id.btn_del);
         }
-
-//        public TextView getTextView() {
-//            return product_name;
-//        }
-//        public TextView getTextPrice() {
-//            return product_price;
-//        }
     }
 
 
@@ -85,9 +78,6 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         // 4.受け取ったビューホルダーに表示するデータを埋め込む
-//        viewHolder.getTextView().setText(localDataSet.get(position));
-//        viewHolder.getTextPrice().setText(localDataSet.get(position));
-
         viewHolder.product_name.setText(String.valueOf(name.get(position)));
         viewHolder.product_price.setText(String.valueOf(price.get(position)));
 
