@@ -1,19 +1,19 @@
 package com.websarva.wings.android.tableorderapp.database;
 
-import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-import android.widget.Toast;
 
+import com.websarva.wings.android.tableorderapp.admin.editmenu.MenuAdapter;
 import com.websarva.wings.android.tableorderapp.database.DBContract.ProductEntry;
 
 public class ProductOpenHelper extends SQLiteOpenHelper {
 
     private final Context context;
+    MenuAdapter menuAdapter;
 
     // データーベースのバージョン
     private static final int DATABASE_VERSION = 1;
@@ -79,11 +79,45 @@ public class ProductOpenHelper extends SQLiteOpenHelper {
         }
     }
 
+    // データ削除メソッド
+    public void deleteData(String product_name) {
+        Log.d("ProductOpenHelper", "deleteData");
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // クエリの 'where' 部分を定義
+        String selection = ProductEntry.COLUMN_NAME_NAME + " LIKE ?";
+
+        // 引数をプレースホルダ順に指定
+        String[] selectionArgs = { product_name };
+
+        // Productsテーブルからレコードを削除
+        db.delete(ProductEntry.PRODUCT_TABLE_NAME, selection, selectionArgs);
+
+        // データベースをクローズ
+        db.close();
+    }
+
+    public void updateData(String product_id, String product_name, int product_price) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues cv = new ContentValues();
+        cv.put("name", product_name);
+        cv.put("price", product_price);
+
+        // クエリの 'where' 部分を定義
+        String selection = ProductEntry._ID + " LIKE ?";
+        // where部分に指定
+        String[] selectionArgs = new String[]{product_id};
+
+        db.update(ProductEntry.PRODUCT_TABLE_NAME, cv, selection, selectionArgs);
+    }
+
     // Cursor作成のために必要
     // rawQueryの引数にはSQL文を渡す
     // MenuAdapterでCursorを作成する時に呼び出される
     public Cursor readData() {
         String query = "SELECT * FROM " + ProductEntry.PRODUCT_TABLE_NAME;
+        // SQLiteDatabaseクラスを取得(書き込み用)
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = null;
@@ -93,6 +127,5 @@ public class ProductOpenHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    // データ削除メソッド
 
 }

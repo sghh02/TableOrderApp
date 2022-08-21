@@ -12,7 +12,7 @@
 
         <TextView
             android:id="@+id/name_text"
-            android:layout_width="330dp"
+            android:layout_width="280dp"
             android:layout_height="70dp"
             android:layout_marginStart="10dp"
             android:background="#00000000"
@@ -21,7 +21,7 @@
 
         <TextView
             android:id="@+id/price_text"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="70dp"
             android:layout_marginStart="10dp"
             android:gravity="center"

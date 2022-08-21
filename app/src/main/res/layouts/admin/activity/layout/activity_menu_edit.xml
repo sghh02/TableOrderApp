@@ -3,69 +3,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:baselineAligned="false"
+    android:orientation="vertical"
     tools:context=".admin.editmenu.MenuEditActivity">
 
     <LinearLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/color_tab_background"
-        tools:ignore="UselessParent">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="40dp" >
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tab_layout"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update_product_name"
+            android:textSize="40sp"
+            android:layout_marginRight="20dp"/>
+
+
+        <EditText
+            android:id="@+id/edit_product_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/color_tab_background"
-            app:tabPaddingTop="13dp"
-            app:tabBackground="@drawable/tab_shape_rounded_corner"
-            app:tabIndicator="@null"
-            app:tabSelectedTextColor="@color/white"
-            app:tabTextColor="@color/black"
-            app:tabMaxWidth="0dp"
-            app:tabGravity="fill"
-            app:tabMode="fixed">
+            android:hint="@string/update_product_name_hint"
+            android:textSize="40sp"
+            android:inputType="text"
+            tools:ignore="Autofill" />
 
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tab1" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/tab2" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/tab3" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/tab4" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/tab5" />
-
-        </com.google.android.material.tabs.TabLayout>
-
-        <!-- 水平区切り線 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:background="@color/orange"
-            android:text="" />
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/pager2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="40dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update_product_price"
+            android:textSize="40sp"
+            android:layout_marginRight="20dp"/>
+
+        <EditText
+            android:id="@+id/edit_product_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="@string/update_product_price_hint"
+            android:textSize="40sp"
+            tools:ignore="Autofill,MissingPrefix" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/update_menu_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_product_update"
+        android:textSize="40sp"
+        android:layout_margin="40dp" />
 </LinearLayout>

@@ -1,55 +1,69 @@
 package com.websarva.wings.android.tableorderapp.admin.editmenu;
 
+import android.content.ContentUris;
+import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.viewpager2.widget.ViewPager2;
 
-import com.google.android.material.tabs.TabLayout;
 import com.websarva.wings.android.tableorderapp.R;
+import com.websarva.wings.android.tableorderapp.database.DBContract;
+import com.websarva.wings.android.tableorderapp.database.ProductOpenHelper;
 
-/**
- * 役割：Fragmentの入れ物
- */
 public class MenuEditActivity extends AppCompatActivity {
 
-    TabLayout tabLayout;
-    ViewPager2 viewPager2;
-    PagerAdapter pagerAdapter;
+    EditText product_name;
+    EditText product_price;
+    Button update_button;
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_edit);
 
-        tabLayout = findViewById(R.id.tab_layout);
-        viewPager2 = findViewById(R.id.pager2);
+        product_name = findViewById(R.id.edit_product_name);
+        product_price = findViewById(R.id.edit_product_price);
+        update_button = findViewById(R.id.update_menu_button);
 
-        FragmentManager fm = getSupportFragmentManager();
-        pagerAdapter = new PagerAdapter(fm, getLifecycle());
-        viewPager2.setAdapter(pagerAdapter);
+        intent = getIntent();
+        String edit_id = intent.getStringExtra("id");
+        String edit_name = intent.getStringExtra("name");
+        String edit_price = intent.getStringExtra("price");
 
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            // タグセレクト時、Positionを取得する
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager2.setCurrentItem(tab.getPosition());
-            }
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
+        // 商品名と商品価格の入力欄にgetIntentした値をset
+        product_name.setText(edit_name);
+        product_price.setText(edit_price);
 
-            }
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
+        // add_button押下時の処理
+        update_button.setOnClickListener(view -> {
+            /**
+             * 入力欄の状態によっての条件分岐
+             * ture:Productテーブルにデータを挿入し、MenuEditActivityへ遷移
+             * false:Toast表示
+             */
+            if (product_name.getText().toString().trim().equals("") || product_price.getText().toString().trim().equals("")) {
+                // 入力欄が1つでも空欄の場合Toast表示
+                Toast.makeText(getApplicationContext(),"すべての入力欄を埋めてください!",Toast.LENGTH_SHORT).show();
+            }else {
+                ProductOpenHelper productOpenHelper = new ProductOpenHelper(this);
 
-            }
-        });
-        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                tabLayout.selectTab(tabLayout.getTabAt(position));
+                // 入力された商品番号、商品名、商品価格を商品テーブルに
+                productOpenHelper.updateData(
+                        edit_id,
+                        product_name.getText().toString().trim(),
+                        Integer.parseInt(product_price.getText().toString().trim()));
+
+                Log.d("--->", edit_id + ":" + product_name + ":" + product_price);
+
+                // MenuEditActivityに遷移する処理
+                intent = new Intent(this, MenuActivity.class);
+                startActivity(intent);
             }
         });
     }

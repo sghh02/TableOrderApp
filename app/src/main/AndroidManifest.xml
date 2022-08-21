@@ -10,10 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TableOrderApp">
         <activity
-            android:name=".admin.editmenu.MenuAddActivity"
-            android:exported="false" />
-        <activity
             android:name=".admin.editmenu.MenuEditActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".admin.editmenu.MenuAddActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".admin.editmenu.MenuActivity"
             android:exported="true"
             android:screenOrientation="landscape" />
         <activity

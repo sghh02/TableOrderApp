@@ -20,5 +20,17 @@
     <string name="tab4">料理３</string>
     <string name="tab5">ドリンク</string>
 
-    // 編集メニュー
+    // 商品追加メニュー
+    <string name="add_product_name">商品名</string>
+    <string name="add_product_name_hint">ビール</string>
+    <string name="add_product_price">商品価格</string>
+    <string name="add_product_price_hint">500</string>
+    <string name="bt_product_add">商品を追加</string>
+
+    // 商品編集メニュー
+    <string name="update_product_name">商品名</string>
+    <string name="update_product_name_hint">ビール</string>
+    <string name="update_product_price">商品価格</string>
+    <string name="update_product_price_hint">500</string>
+    <string name="bt_product_update">変更を保存</string>
 </resources>
