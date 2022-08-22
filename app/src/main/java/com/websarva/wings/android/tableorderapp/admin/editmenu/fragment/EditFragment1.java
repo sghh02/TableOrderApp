@@ -19,6 +19,8 @@ import com.websarva.wings.android.tableorderapp.admin.editmenu.MenuAddActivity;
 import com.websarva.wings.android.tableorderapp.database.ProductOpenHelper;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class EditFragment1 extends Fragment {
 
@@ -35,7 +37,7 @@ public class EditFragment1 extends Fragment {
     RecyclerView recyclerView4;
 
     ProductOpenHelper productOpenHelper;
-    MenuAdapter adapter;
+    MenuAdapter adapter1, adapter2, adapter3, adapter4;
     ArrayList<String> id, product_id, product_name, product_price;
     Intent intent;
 
@@ -68,12 +70,42 @@ public class EditFragment1 extends Fragment {
         // onDataInArraysメソッド呼出し
         onDataInArrays();
 
+        List<String> set1 = new ArrayList<>();
+        Collections.addAll(set1, "2", "3", "4");
+        List<String> set2 = new ArrayList<>();
+        Collections.addAll(set2, "1", "3", "4");
+        List<String> set3 = new ArrayList<>();
+        Collections.addAll(set3, "1", "2", "4");
+        List<String> set4 = new ArrayList<>();
+        Collections.addAll(set4, "1", "2", "3");
+
+
+        ArrayList<String> product_id_1 = product_id;
+        product_id_1.removeAll(set1);
+        ArrayList<String> product_id_2 = product_id;
+        product_id_2.removeAll(set2);
+        ArrayList<String> product_id_3 = product_id;
+        product_id_3.removeAll(set3);
+        ArrayList<String> product_id_4 = product_id;
+        product_id_4.removeAll(set4);
+
+        Log.d(TAG, product_id + "---");
+        Log.d(TAG, product_id_1 + "---");
+        Log.d(TAG, product_id_2 + "---");
+        Log.d(TAG, product_id_3 + "---");
+        Log.d(TAG, product_id_4 + "---");
+
         // MenuAdapterコンストラクタを呼出し
-        adapter = new MenuAdapter(getContext(), id, product_id, product_name, product_price);
-        recyclerView1.setAdapter(adapter);
-        recyclerView2.setAdapter(adapter);
-        recyclerView3.setAdapter(adapter);
-        recyclerView4.setAdapter(adapter);
+        adapter1 = new MenuAdapter(getContext(), id, product_id_1, product_name, product_price);
+        Log.d(TAG, adapter1 + "---");
+        recyclerView1.setAdapter(adapter1);
+        Log.d(TAG, recyclerView1 + "---");
+        adapter2 = new MenuAdapter(getContext(), id, product_id_2, product_name, product_price);
+        recyclerView2.setAdapter(adapter2);
+        adapter3 = new MenuAdapter(getContext(), id, product_id_3, product_name, product_price);
+        recyclerView3.setAdapter(adapter3);
+        adapter4 = new MenuAdapter(getContext(), id, product_id_4, product_name, product_price);
+        recyclerView4.setAdapter(adapter4);
 
         // LayoutManagerの設定
         LinearLayoutManager layoutManager1 = new LinearLayoutManager(getContext());
