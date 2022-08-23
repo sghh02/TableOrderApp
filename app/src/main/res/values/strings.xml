@@ -20,6 +20,14 @@
     <string name="tab4">料理３</string>
     <string name="tab5">ドリンク</string>
 
+    // 注文画面(右側)
+    <string name="tv_clerk_call_button">店員呼出し</string>
+    <string name="tv_order_history">注文履歴</string>
+    <string name="tv_bill">お会計</string>
+    <string name="bt_order">注文する</string>
+    <string name="title_clerk_call">店員を呼出しています</string>
+    <string name="message_clerk_call">少々お待ちくださませ</string>
+
     // 商品追加メニュー
     <string name="add_product_name">商品名</string>
     <string name="add_product_name_hint">ビール</string>
