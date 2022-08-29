@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.websarva.wings.android.tableorderapp.R;
+import com.websarva.wings.android.tableorderapp.database.DBContract;
 import com.websarva.wings.android.tableorderapp.database.ProductOpenHelper;
 
 import java.util.ArrayList;

@@ -20,7 +20,7 @@
     <string name="tab4">料理３</string>
     <string name="tab5">ドリンク</string>
 
-    // 注文画面(右側)
+    // 注文画面(右側サイドバー)
     <string name="tv_clerk_call_button">店員呼出し</string>
     <string name="tv_order_history">注文履歴</string>
     <string name="tv_bill">お会計</string>

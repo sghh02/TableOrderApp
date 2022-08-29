@@ -19,8 +19,7 @@ import com.websarva.wings.android.tableorderapp.admin.editmenu.MenuAddActivity;
 import com.websarva.wings.android.tableorderapp.database.ProductOpenHelper;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.HashMap;
 
 public class EditFragment1 extends Fragment {
 
@@ -36,9 +35,15 @@ public class EditFragment1 extends Fragment {
     RecyclerView recyclerView3;
     RecyclerView recyclerView4;
 
+
     ProductOpenHelper productOpenHelper;
     MenuAdapter adapter1, adapter2, adapter3, adapter4;
-    ArrayList<String> id, product_id, product_name, product_price;
+
+    HashMap<String, ArrayList<String>> id_map = new HashMap<>();
+    HashMap<String, ArrayList<String>> product_id_map = new HashMap<>();
+    HashMap<String, ArrayList<String>> product_name_map = new HashMap<>();
+    HashMap<String, ArrayList<String>> product_price_map = new HashMap<>();
+
     Intent intent;
 
 
@@ -62,49 +67,17 @@ public class EditFragment1 extends Fragment {
         recyclerView3 = view.findViewById(R.id.edit_list3);
         recyclerView4 = view.findViewById(R.id.edit_list4);
 
-        id = new ArrayList<>();
-        product_id = new ArrayList<>();
-        product_name = new ArrayList<>();
-        product_price = new ArrayList<>();
-
         // onDataInArraysメソッド呼出し
         onDataInArrays();
 
-        List<String> set1 = new ArrayList<>();
-        Collections.addAll(set1, "2", "3", "4");
-        List<String> set2 = new ArrayList<>();
-        Collections.addAll(set2, "1", "3", "4");
-        List<String> set3 = new ArrayList<>();
-        Collections.addAll(set3, "1", "2", "4");
-        List<String> set4 = new ArrayList<>();
-        Collections.addAll(set4, "1", "2", "3");
-
-
-        ArrayList<String> product_id_1 = product_id;
-        product_id_1.removeAll(set1);
-        ArrayList<String> product_id_2 = product_id;
-        product_id_2.removeAll(set2);
-        ArrayList<String> product_id_3 = product_id;
-        product_id_3.removeAll(set3);
-        ArrayList<String> product_id_4 = product_id;
-        product_id_4.removeAll(set4);
-
-        Log.d(TAG, product_id + "---");
-        Log.d(TAG, product_id_1 + "---");
-        Log.d(TAG, product_id_2 + "---");
-        Log.d(TAG, product_id_3 + "---");
-        Log.d(TAG, product_id_4 + "---");
-
         // MenuAdapterコンストラクタを呼出し
-        adapter1 = new MenuAdapter(getContext(), id, product_id_1, product_name, product_price);
-        Log.d(TAG, adapter1 + "---");
+        adapter1 = new MenuAdapter(getContext(), id_map.get("1"), product_id_map.get("1"), product_name_map.get("1"), product_price_map.get("1"));
         recyclerView1.setAdapter(adapter1);
-        Log.d(TAG, recyclerView1 + "---");
-        adapter2 = new MenuAdapter(getContext(), id, product_id_2, product_name, product_price);
+        adapter2 = new MenuAdapter(getContext(), id_map.get("2"), product_id_map.get("2"), product_name_map.get("2"), product_price_map.get("2"));
         recyclerView2.setAdapter(adapter2);
-        adapter3 = new MenuAdapter(getContext(), id, product_id_3, product_name, product_price);
+        adapter3 = new MenuAdapter(getContext(), id_map.get("3"), product_id_map.get("3"), product_name_map.get("3"), product_price_map.get("3"));
         recyclerView3.setAdapter(adapter3);
-        adapter4 = new MenuAdapter(getContext(), id, product_id_4, product_name, product_price);
+        adapter4 = new MenuAdapter(getContext(), id_map.get("4"), product_id_map.get("4"), product_name_map.get("4"), product_price_map.get("4"));
         recyclerView4.setAdapter(adapter4);
 
         // LayoutManagerの設定
@@ -117,15 +90,15 @@ public class EditFragment1 extends Fragment {
         recyclerView3.setLayoutManager(layoutManager3);
         recyclerView4.setLayoutManager(layoutManager4);
 
-        /** RecyclerViewにListを追加する処理 */
+        // RecyclerViewにListを追加する処理
         add_menu_button1 = view.findViewById(R.id.add_menu_button1);
         add_menu_button2 = view.findViewById(R.id.add_menu_button2);
         add_menu_button3 = view.findViewById(R.id.add_menu_button3);
         add_menu_button4 = view.findViewById(R.id.add_menu_button4);
 
-        /**
-         *  add_menu_button1を押下時の処理
-         *  MenuAddActivityに遷移
+        /*
+           add_menu_button1を押下時の処理
+           MenuAddActivityに遷移
          */
         add_menu_button1.setOnClickListener(v -> {
             intent = new Intent(getActivity(), MenuAddActivity.class);
@@ -156,12 +129,78 @@ public class EditFragment1 extends Fragment {
 
     // readDataで用意したCursorを操作。0番からid,product_id,product_name,product_priceが入っている
     void onDataInArrays() {
+        // 初期化
+        ArrayList<String> id1 = new ArrayList<>();
+        ArrayList<String> id2 = new ArrayList<>();
+        ArrayList<String> id3 = new ArrayList<>();
+        ArrayList<String> id4 = new ArrayList<>();
+        ArrayList<String> product_id1 = new ArrayList<>();
+        ArrayList<String> product_id2 = new ArrayList<>();
+        ArrayList<String> product_id3 = new ArrayList<>();
+        ArrayList<String> product_id4 = new ArrayList<>();
+        ArrayList<String> product_name1 = new ArrayList<>();
+        ArrayList<String> product_name2 = new ArrayList<>();
+        ArrayList<String> product_name3 = new ArrayList<>();
+        ArrayList<String> product_name4 = new ArrayList<>();
+        ArrayList<String> product_price1 = new ArrayList<>();
+        ArrayList<String> product_price2 = new ArrayList<>();
+        ArrayList<String> product_price3 = new ArrayList<>();
+        ArrayList<String> product_price4 = new ArrayList<>();
+
         Cursor cursor = productOpenHelper.readData();
         while (cursor.moveToNext()) {
-            id.add(cursor.getString(0));
-            product_id.add(cursor.getString(1));
-            product_name.add(cursor.getString(2));
-            product_price.add(cursor.getString(3));
+            switch (cursor.getString(1)) {
+                case "1":
+                    id1.add(cursor.getString(0));
+                    product_id1.add(cursor.getString(1));
+                    product_name1.add(cursor.getString(2));
+                    product_price1.add(cursor.getString(3));
+                    break;
+                case "2":
+                    id2.add(cursor.getString(0));
+                    product_id2.add(cursor.getString(1));
+                    product_name2.add(cursor.getString(2));
+                    product_price2.add(cursor.getString(3));
+                    break;
+                case "3":
+                    id3.add(cursor.getString(0));
+                    product_id3.add(cursor.getString(1));
+                    product_name3.add(cursor.getString(2));
+                    product_price3.add(cursor.getString(3));
+                    break;
+                case "4":
+                    id4.add(cursor.getString(0));
+                    product_id4.add(cursor.getString(1));
+                    product_name4.add(cursor.getString(2));
+                    product_price4.add(cursor.getString(3));
+                    break;
+            }
+        }
+
+        // product_idごとにHashMapに格納
+        for (int i = 1; i < 4; i++) {
+            switch (i) {
+                case 1:
+                    id_map.put("1", id1);
+                    product_id_map.put("1", product_id1);
+                    product_name_map.put("1", product_name1);
+                    product_price_map.put("1", product_price1);
+                case 2:
+                    id_map.put("2", id2);
+                    product_id_map.put("2", product_id2);
+                    product_name_map.put("2", product_name2);
+                    product_price_map.put("2", product_price2);
+                case 3:
+                    id_map.put("3", id3);
+                    product_id_map.put("3", product_id3);
+                    product_name_map.put("3", product_name3);
+                    product_price_map.put("3", product_price3);
+                case 4:
+                    id_map.put("4", id4);
+                    product_id_map.put("4", product_id4);
+                    product_name_map.put("4", product_name4);
+                    product_price_map.put("4", product_price4);
+            }
         }
     }
 }
