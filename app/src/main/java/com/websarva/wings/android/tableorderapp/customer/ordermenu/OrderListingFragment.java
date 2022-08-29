@@ -43,7 +43,7 @@ public class OrderListingFragment extends Fragment {
             };
             // 5.ダイアログの表示
             dialog.show();
-            //　6.2秒たったらrインスタンスを呼び出しダイアログを非表示にする
+            // 6.2秒たったらrインスタンスを呼び出しダイアログを非表示にする
             handler.postDelayed(r, 2000);
         });
 
