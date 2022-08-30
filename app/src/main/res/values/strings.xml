@@ -41,4 +41,6 @@
     <string name="update_product_price">商品価格</string>
     <string name="update_product_price_hint">500</string>
     <string name="bt_product_update">変更を保存</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
