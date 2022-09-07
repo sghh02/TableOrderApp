@@ -3,12 +3,10 @@ package com.websarva.wings.android.tableorderapp.customer.ordermenu;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -17,7 +15,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.websarva.wings.android.tableorderapp.R;
-import com.websarva.wings.android.tableorderapp.admin.editmenu.MenuEditActivity;
 
 import java.util.ArrayList;
 
@@ -26,6 +23,10 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
     Context context;
     // 商品番号、商品名、商品価格のArrayList
     ArrayList id, number, name, price;
+
+    String order;
+    String s;
+    OrderListingFragment orderListingFragment;
 
     // コンストラクタ
     public MenuAdapter(Context context, ArrayList id, ArrayList number, ArrayList name, ArrayList price) {
@@ -80,39 +81,51 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
         // 4.受け取ったビューホルダーに表示するデータを埋め込む
         viewHolder.product_name.setText(String.valueOf(name.get(position)));
+        viewHolder.product_price.setText(price.get(position) + "円");
 
         // リスト押下時注文の数量を決めるダイアログを表示する
         viewHolder.row_menu.setOnClickListener(view -> {
-            String edit_name = viewHolder.product_name.getText().toString();
+            order = viewHolder.product_name.getText().toString();
             String[] volume = {"1コ", "2コ", "3コ", "4コ", "5コ"};
+            s = "1";
 
             AlertDialog.Builder builder = new AlertDialog.Builder(context);
+            orderListingFragment = new OrderListingFragment();
             // builderにTitleとMessageを設定
-            builder.setTitle(edit_name + "の数量をお選びください")
+            builder.setTitle(order + "の数量をお選びください")
                     .setSingleChoiceItems(volume, 0, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             switch (i) {
                                 case 1:
+                                    s = "2";
                                     break;
                                 case 2:
+                                    s = "3";
                                     break;
                                 case  3:
+                                    s = "4";
                                     break;
                                 case 4:
+                                    s = "5";
                                     break;
                                 default:
+                                    s = "1";
                                     break;
                             }
                         }
                     })
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    .setPositiveButton("注文リストに追加", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
+                            orderListingFragment = new OrderListingFragment();
+                            orderListingFragment.onOrderList(context, order, s);
+                            Log.d("---", "order_name" + " : " + order);
+                            Log.d("---", "order_volume" + " : " + s);
                             dialogInterface.dismiss();
                         }
                     })
-                    .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                    .setNegativeButton("キャンセル", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             dialogInterface.dismiss();
@@ -121,7 +134,6 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
 
             // アラートダイアログの取得
             AlertDialog dialog = builder.create();
-
             // ダイアログの表示
             dialog.show();
         });
