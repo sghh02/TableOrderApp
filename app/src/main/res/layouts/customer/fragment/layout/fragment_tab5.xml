@@ -34,17 +34,17 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="2dp"
                     android:paddingBottom="2dp"
-                    android:text="ビール＆ハイボール"
+                    android:text="@string/title17"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:gravity="center"
                     android:background="@drawable/menu_title_rounded_corner" />
 
-                <ListView
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_item1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/white"
-                    android:cacheColorHint="@color/color_tab_unselected"
                     android:dividerHeight="1dp"
                     android:footerDividersEnabled="true"
                     android:headerDividersEnabled="false"
@@ -64,13 +64,14 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="2dp"
                     android:paddingBottom="2dp"
-                    android:text="チューハイ"
+                    android:text="@string/title18"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:gravity="center"
                     android:background="@drawable/menu_title_rounded_corner" />
 
-                <ListView
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_item2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/white"
@@ -103,13 +104,14 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="2dp"
                     android:paddingBottom="2dp"
-                    android:text="日本酒"
+                    android:text="@string/title19"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:gravity="center"
                     android:background="@drawable/menu_title_rounded_corner" />
 
-                <ListView
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_item3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/white"
@@ -132,13 +134,14 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="2dp"
                     android:paddingBottom="2dp"
-                    android:text="ソフトドリンク"
+                    android:text="@string/title20"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:gravity="center"
                     android:background="@drawable/menu_title_rounded_corner" />
 
-                <ListView
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_item4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/white"

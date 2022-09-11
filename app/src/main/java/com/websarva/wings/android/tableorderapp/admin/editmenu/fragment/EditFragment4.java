@@ -57,7 +57,7 @@ public class EditFragment4 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Log.d(TAG, "onCreateView: called");
-        View view = inflater.inflate(R.layout.fragment_edit2, container, false);
+        View view = inflater.inflate(R.layout.fragment_edit4, container, false);
 
         productOpenHelper = new ProductOpenHelper(getContext());
 

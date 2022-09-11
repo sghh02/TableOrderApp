@@ -20,6 +20,28 @@
     <string name="tab4">料理３</string>
     <string name="tab5">ドリンク</string>
 
+    // 注文タイトル
+    <string name="title1">おすすめ1</string>
+    <string name="title2">おすすめ2</string>
+    <string name="title3">おすすめ3</string>
+    <string name="title4">おすすめ4</string>
+    <string name="title5">料理１</string>
+    <string name="title6">料理2</string>
+    <string name="title7">料理3</string>
+    <string name="title8">料理4</string>
+    <string name="title9">料理5</string>
+    <string name="title10">料理6</string>
+    <string name="title11">料理7</string>
+    <string name="title12">料理8</string>
+    <string name="title13">料理9</string>
+    <string name="title14">料理10</string>
+    <string name="title15">料理11</string>
+    <string name="title16">料理12</string>
+    <string name="title17">ビール＆ハイボール</string>
+    <string name="title18">チューハイ</string>
+    <string name="title19">日本酒＆ワイン</string>
+    <string name="title20">ソフトドリンク</string>
+
     // 注文画面(右側サイドバー)
     <string name="tv_clerk_call_button">店員呼出し</string>
     <string name="tv_order_history">注文履歴</string>
@@ -27,6 +49,7 @@
     <string name="bt_order">注文する</string>
     <string name="title_clerk_call">店員を呼出しています</string>
     <string name="message_clerk_call">少々お待ちくださませ</string>
+    <string name="order_clerk_button">注文を承りました</string>
 
     // 商品追加メニュー
     <string name="add_product_name">商品名</string>
@@ -41,6 +64,4 @@
     <string name="update_product_price">商品価格</string>
     <string name="update_product_price_hint">500</string>
     <string name="bt_product_update">変更を保存</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

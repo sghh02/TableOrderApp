@@ -3,6 +3,7 @@ package com.websarva.wings.android.tableorderapp.customer.ordermenu;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -118,11 +119,15 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
                     .setPositiveButton("注文リストに追加", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            orderListingFragment = new OrderListingFragment();
-                            orderListingFragment.onOrderList(context, order, s);
+                            Intent intent = new Intent("action.add_order_to_list");
+                            intent.putExtra("name", order);
+                            intent.putExtra("volume", s);
+
+                            // name&volumeの値確認
                             Log.d("---", "order_name" + " : " + order);
                             Log.d("---", "order_volume" + " : " + s);
-                            dialogInterface.dismiss();
+                            // name&volumeの値をsendBroadcast
+                            context.sendBroadcast(intent);
                         }
                     })
                     .setNegativeButton("キャンセル", new DialogInterface.OnClickListener() {
